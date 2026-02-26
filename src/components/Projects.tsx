@@ -359,7 +359,7 @@ export default function Projects() {
           </button>
         ))}
       </div>
-      <section className="py-5 flex gap-5 overflow-x-auto">
+      <section className="flex gap-5 overflow-x-auto pb-2">
         {projects
           .filter(
             (project) =>
@@ -369,7 +369,7 @@ export default function Projects() {
           .map((project, i) => (
             <article
               key={i}
-              className="min-w-[400px] w-[400px] border border-black box-shadow flex flex-col"
+              className="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] border border-black box-shadow flex flex-col"
             >
               <header className="p-4 border-black">
                 <h1 className="font-serif text-xl font-bold">{project.name}</h1>

@@ -254,16 +254,16 @@ const talks = [
 ---
 
 <Layout title="Frectonz">
-  <header class="my-10 grid intro-about-grid gap-5">
-    <div class="min-h-[300px] border border-black flex flex-col box-shadow">
+  <header class="my-6 sm:my-10 grid intro-about-grid gap-5">
+    <div class="sm:min-h-[300px] border border-black flex flex-col box-shadow">
       <section
         class="p-4 flex-grow flex flex-col sm:flex-row gap-4 items-start justify-start"
       >
         <img
           src="me.webp"
-          class="w-28 h-28 rounded-full border border-black object-cover"
+          class="w-20 h-20 sm:w-28 sm:h-28 rounded-full border border-black object-cover"
         />
-        <h1 class="text-4xl">
+        <h1 class="text-2xl sm:text-4xl">
           Hi, I'm
           <span class="font-serif font-bold">fraol</span> or
           <br />
@@ -286,10 +286,13 @@ const talks = [
       </section>
 
       <section class="p-4 border-t border-black flex gap-5 items-center">
-        <p>
+        <p class="leading-loose">
           I have a <a
             href="https://telegram.me/s/thefrectonz"
             class="bg-black text-white p-0.5">telegram channel</a
+          > and a <a
+            href="https://www.youtube.com/@frectonz"
+            class="bg-black text-white p-0.5">youtube channel</a
           >.
         </p>
       </section>
@@ -305,10 +308,10 @@ const talks = [
     </div>
 
     <section
-      class="min-h-[300px] p-4 border border-black box-shadow bg-black text-white"
+      class="sm:min-h-[300px] p-4 border border-black box-shadow bg-black text-white"
     >
-      <h1 class="text-3xl font-bold pb-4">About Me</h1>
-      <p class="text-xl">
+      <h1 class="text-2xl sm:text-3xl font-bold pb-4">About Me</h1>
+      <p class="text-base sm:text-xl">
         I have been interested in technology and its ability to influence our
         life for as long as I remember. This interest has lead into the world of
         software development which I enjoy very much.
@@ -317,7 +320,9 @@ const talks = [
   </header>
 
   <article>
-    <h1 class="font-serif text-3xl mb-4">Programming Languages I work with</h1>
+    <h1 class="font-serif text-xl sm:text-3xl mb-4">
+      Programming Languages I work with
+    </h1>
     <div class="flex gap-2 flex-wrap">
       {
         languages.map((lang) => (
@@ -334,9 +339,8 @@ const talks = [
     </div>
   </article>
 
-  <section class="my-10">
-    <h1 class="text-4xl font-serif mb-5 font-bold">Projects</h1>
-    <p>My projects.</p>
+  <section class="my-6 sm:my-10">
+    <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">Projects</h1>
     <Projects client:load />
     <a
       href="https://github.com/frectonz?tab=repositories"
@@ -344,15 +348,14 @@ const talks = [
     >
   </section>
 
-  <section class="my-10">
-    <h1 class="text-4xl font-serif mb-5 font-bold">
+  <section class="my-6 sm:my-10">
+    <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">
       Open-source Contributions
     </h1>
-    <p>My OSS contributions.</p>
-    <div class="py-5 flex gap-5 overflow-x-auto">
+    <div class="flex gap-5 overflow-x-auto pb-2">
       {
         oss.map((p) => (
-          <div class="min-w-[400px] w-[400px] flex flex-col border border-black box-shadow">
+          <div class="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] flex flex-col border border-black box-shadow">
             <div class="p-4">
               <h1 class="font-serif text-xl font-bold">{p.name}</h1>
             </div>
@@ -372,17 +375,14 @@ const talks = [
     </div>
   </section>
 
-  <section class="my-10">
-    <h1 class="text-4xl font-serif mb-5 font-bold">Language Forks</h1>
-    <p>
-      I also like forking the codebases of some popular programming languages
-      and changing the names of some keywords and adding some new operations to
-      them.
-    </p>
-    <div class="py-5 flex gap-5 overflow-x-auto">
+  <section class="my-6 sm:my-10">
+    <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">
+      Language Forks
+    </h1>
+    <div class="flex gap-5 overflow-x-auto pb-2">
       {
         languageForks.map((l) => (
-          <div class="min-w-[400px] w-[400px] flex flex-col border border-black box-shadow">
+          <div class="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] flex flex-col border border-black box-shadow">
             <div class="p-4">
               <h1 class="font-serif text-xl font-bold">{l.name}</h1>
             </div>
@@ -402,14 +402,12 @@ const talks = [
     </div>
   </section>
 
-  <section class="my-10">
-    <h1 class="text-4xl font-serif mb-5 font-bold">Talks</h1>
-    <p>Talks and presentations I've given.</p>
-
-    <div class="py-5 flex gap-5 overflow-x-auto">
+  <section class="my-6 sm:my-10">
+    <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">Talks</h1>
+    <div class="flex gap-5 overflow-x-auto pb-2">
       {
         talks.map((t) => (
-          <div class="min-w-[400px] w-[400px] flex flex-col border border-black box-shadow">
+          <div class="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] flex flex-col border border-black box-shadow">
             <div class="p-4">
               <h1 class="font-serif text-xl font-bold">{t.name}</h1>
             </div>
@@ -434,8 +432,8 @@ const talks = [
     </div>
   </section>
 
-  <section class="my-10">
-    <h1 class="text-4xl font-serif mb-5 font-bold">Essays</h1>
+  <section class="my-6 sm:my-10">
+    <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">Essays</h1>
     <main>
       <ul class="grid grid-cols-1 gap-3">
         {
@@ -443,10 +441,10 @@ const talks = [
             <li class="border border-black box-shadow">
               <a
                 href={`/essays/${essay.slug}`}
-                class="flex justify-between transition-colors hover:bg-black hover:text-white"
+                class="flex flex-col sm:flex-row sm:justify-between transition-colors hover:bg-black hover:text-white"
               >
                 <h1 class="p-2">{essay.name}</h1>
-                <p class="border-l border-black p-2 font-serif">
+                <p class="border-t sm:border-t-0 sm:border-l border-black p-2 font-serif">
                   {essay.publishedOn}
                 </p>
               </a>
@@ -457,8 +455,8 @@ const talks = [
     </main>
   </section>
 
-  <section class="my-10">
-    <h1 class="text-4xl font-serif mb-5 font-bold">Stories</h1>
+  <section class="my-6 sm:my-10">
+    <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">Stories</h1>
     <main>
       <ul class="grid grid-cols-1 gap-3">
         {
@@ -466,10 +464,10 @@ const talks = [
             <li class="border border-black box-shadow">
               <a
                 href={`/stories/${story.slug}`}
-                class="flex justify-between transition-colors hover:bg-black hover:text-white"
+                class="flex flex-col sm:flex-row sm:justify-between transition-colors hover:bg-black hover:text-white"
               >
                 <h1 class="p-2">{story.name}</h1>
-                <p class="border-l border-black p-2 font-serif">
+                <p class="border-t sm:border-t-0 sm:border-l border-black p-2 font-serif">
                   {story.publishedOn}
                 </p>
               </a>

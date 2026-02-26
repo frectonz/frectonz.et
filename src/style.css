@@ -9,7 +9,13 @@ body {
 }
 
 .box-shadow {
-  box-shadow: 5px 5px hsla(0, 0%, 0%, 0.5);
+  box-shadow: 3px 3px hsla(0, 0%, 0%, 0.5);
+}
+
+@media (min-width: 640px) {
+  .box-shadow {
+    box-shadow: 5px 5px hsla(0, 0%, 0%, 0.5);
+  }
 }
 
 .text-highlight {
