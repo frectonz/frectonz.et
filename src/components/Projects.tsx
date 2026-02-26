@@ -27,6 +27,20 @@ const tags = {
 
 const projects = [
   {
+    name: "Penny",
+    code: "https://github.com/frectonz/penny",
+    url: "https://pennyproxy.com/",
+    description: "Serverless for your servers.",
+    tags: [tags["rust"], tags["typescript"], tags["nix"]],
+  },
+  {
+    name: "PM3",
+    code: "https://github.com/frectonz/pm3",
+    url: "https://pm3.frectonz.et/",
+    description: "A process manager with TOML configuration.",
+    tags: [tags["rust"]],
+  },
+  {
     name: "SQL Studio",
     code: "https://github.com/frectonz/sql-studio",
     url: "https://sql-studio.frectonz.et/",
