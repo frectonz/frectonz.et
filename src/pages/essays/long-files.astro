@@ -101,12 +101,12 @@ import "../../style.css";
         The first one is: fewer decisions. People think the task of getting a
         directory hierarchy right is easy, but I think it takes a bunch of
         thought to really have a good directory hierarchy for a project. This
-        thought process is done incrementally. It is often rethought every single time you add
-        a feature to the project. Before you even start implementing something,
-        first you gotta think: okay, where would be a good place to implement
-        this? Then I gotta import it here, hook it up with the DB, handle the
-        config there, and stuff. And before you finish, you’ve added 3 or 4
-        files, each of them with less than 40 lines of code.
+        thought process is done incrementally. It is often rethought every
+        single time you add a feature to the project. Before you even start
+        implementing something, first you gotta think: okay, where would be a
+        good place to implement this? Then I gotta import it here, hook it up
+        with the DB, handle the config there, and stuff. And before you finish,
+        you’ve added 3 or 4 files, each of them with less than 40 lines of code.
       </p>
 
       <p>
@@ -144,11 +144,12 @@ import "../../style.css";
       <p>
         This kind of work is also a nice refresher since most other languages
         don’t allow you to create multiple namespaces in a single file. It’s
-        nice to work in a language that does. Since I mostly work on web
-        dev, that’s where I got most of my experience in programming, and what’s
+        nice to work in a language that does. Since I mostly work on web dev,
+        that’s where I got most of my experience in programming, and what’s
         often the general knowledge in things like React is that you should
         separate each component into its own file. Some people even add lints to
-        block files that have more than 300 lines or so. It is a nice change of pace from that world.
+        block files that have more than 300 lines or so. It is a nice change of
+        pace from that world.
       </p>
 
       <p>
@@ -171,15 +172,17 @@ import "../../style.css";
         Also, an interesting tidbit is that in C, having one long file instead
         of having multiple smaller ones helps with better performance. Because
         often, C compilers can do more optimizations if all your code is in a
-        large file. The SQLite project does <a href="https://sqlite.org/amalgamation.html">this</a> for example.
+        large file. The SQLite project does <a
+          href="https://sqlite.org/amalgamation.html">this</a
+        > for example.
       </p>
 
       <p>
         So I just wanna say that modularizing doesn’t mean just separating stuff
         into multiple files. You can modularize stuff in a single file. You just
         need to have a way to allow yourself to wrap things into smaller in file
-        modules. You can even use classes and functions to modularize your
-        code, even when working in languages that don't support inline modules.
+        modules. You can even use classes and functions to modularize your code,
+        even when working in languages that don't support inline modules.
       </p>
     </main>
   </body>
