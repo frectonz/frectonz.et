@@ -11,13 +11,13 @@ import "../../style.css";
     <meta name="generator" content={Astro.generator} />
     <title>Long Files</title>
 
-    <meta property="og:type" value="website" />
-    <meta property="og:title" value="Long Files" />
-    <meta property="og:url" value="/essays/long-files" />
-    <meta property="og:image" value="/long-files.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Long Files" />
+    <meta property="og:url" content="/essays/long-files" />
+    <meta property="og:image" content="/long-files.png" />
     <meta
       property="og:image:alt"
-      value="Illustration of a person with a mustache, wearing a cap and coat, riding a giant rooster while holding a stick. The drawing is in a vintage, sketchy style and colored in green."
+      content="Illustration of a person with a mustache, wearing a cap and coat, riding a giant rooster while holding a stick. The drawing is in a vintage, sketchy style and colored in green."
     />
   </head>
   <body class="mx-5 sm:mx-20">
@@ -47,10 +47,10 @@ import "../../style.css";
 
       <p>
         When people first run into these projects and check out the code, they
-        often think that the code is not structured and is just spaghetti-fied
+        often think that the code is not structured and is just spaghettified
         with everything jammed into a single file. That couldn’t be further from
-        the truth. Actually, all of these projects—while they are contained in a
-        single file—are in fact modularized.
+        the truth. Actually, all of these projects while they are contained in a
+        single file are in fact modularized.
       </p>
 
       <p>
@@ -59,7 +59,7 @@ import "../../style.css";
           >module</a
         >. A module is just a namespace that contains a bunch of items like a
         struct or function, constants, and stuff like that. But it is also not
-        just a namespace—it also allows us to control the visibility of these
+        just a namespace, it also allows us to control the visibility of these
         items. Like, for example, you could put the <code>pub</code> keyword on
         the items you want to be accessed by other code using this module.
       </p>
@@ -76,7 +76,7 @@ import "../../style.css";
         you use the <code>mod</code> keyword to load a file as a module. Then
         after loading a module, you can use the <code>use</code> keyword to
         bring some items from the module into the current context. But you don’t
-        actually have to do that—you can just use their fully qualified name.
+        actually have to do that, you can just use their fully qualified name.
       </p>
 
       <p>
@@ -95,13 +95,13 @@ import "../../style.css";
         different files?
       </p>
 
-      <p>There are multiple reasons—I’ll try to list some of them here.</p>
+      <p>There are multiple reasons, I’ll try to list some of them here.</p>
 
       <p>
         The first one is: fewer decisions. People think the task of getting a
         directory hierarchy right is easy, but I think it takes a bunch of
         thought to really have a good directory hierarchy for a project. This
-        thought process is done incrementally, though—every single time you add
+        thought process is done incrementally. It is often rethought every single time you add
         a feature to the project. Before you even start implementing something,
         first you gotta think: okay, where would be a good place to implement
         this? Then I gotta import it here, hook it up with the DB, handle the
@@ -130,14 +130,14 @@ import "../../style.css";
       <p>
         Also, I find that the ergonomics of working in a single file are better
         than jumping between multiple files. It allows you to focus better
-        because you won’t be context-switching between multiple files. It helps
+        because you won’t be context switching between multiple files. It helps
         you delay the task of modularizing some new feature until after the
         feature is implemented.
       </p>
 
       <p>
         It also allows you to be aware of all the parts of your codebase as it
-        grows. Implementations won’t be hidden behind multiple files—everything
+        grows. Implementations won’t be hidden behind multiple files, everything
         is in a single file.
       </p>
 
@@ -145,10 +145,10 @@ import "../../style.css";
         This kind of work is also a nice refresher since most other languages
         don’t allow you to create multiple namespaces in a single file. It’s
         nice to work in a language that does. Since I mostly work on web
-        dev—that’s where I got most of my experience in programming—and what’s
+        dev, that’s where I got most of my experience in programming, and what’s
         often the general knowledge in things like React is that you should
         separate each component into its own file. Some people even add lints to
-        block files that have more than 300 lines or so.
+        block files that have more than 300 lines or so. It is a nice change of pace from that world.
       </p>
 
       <p>
@@ -161,7 +161,7 @@ import "../../style.css";
       </p>
 
       <p>
-        This is a new-age belief, by the way—the idea that having multiple small
+        It is a new age belief, by the way, the idea that having multiple small
         files is better for readability. But if you check out the codebases of
         older projects, you’ll mostly find a medium number of files, but each of
         them containing thousands of lines of code.
@@ -171,15 +171,15 @@ import "../../style.css";
         Also, an interesting tidbit is that in C, having one long file instead
         of having multiple smaller ones helps with better performance. Because
         often, C compilers can do more optimizations if all your code is in a
-        large file.
+        large file. The SQLite project does <a href="https://sqlite.org/amalgamation.html">this</a> for example.
       </p>
 
       <p>
         So I just wanna say that modularizing doesn’t mean just separating stuff
         into multiple files. You can modularize stuff in a single file. You just
-        need to have a way to allow yourself to wrap things into smaller in-file
+        need to have a way to allow yourself to wrap things into smaller in file
         modules. You can even use classes and functions to modularize your
-        code—even when working in a large single file.
+        code, even when working in languages that don't support inline modules.
       </p>
     </main>
   </body>
