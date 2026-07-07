@@ -41,6 +41,12 @@ const projects = [
     tags: [tags["rust"]],
   },
   {
+    name: "Kimem",
+    code: "https://tangled.org/frectonz.et/kimem",
+    description: "Safaricom Kimem MIFI CLI",
+    tags: [tags["rust"], tags["nix"]],
+  },
+  {
     name: "SQL Studio",
     code: "https://github.com/frectonz/sql-studio",
     url: "https://sql-studio.frectonz.et/",
