@@ -27,6 +27,12 @@ const tags = {
 
 const projects = [
   {
+    name: "Kimem",
+    code: "https://tangled.org/frectonz.et/kimem",
+    description: "Safaricom Kimem MIFI CLI",
+    tags: [tags["rust"], tags["nix"]],
+  },
+  {
     name: "Penny",
     code: "https://github.com/frectonz/penny",
     url: "https://pennyproxy.com/",
