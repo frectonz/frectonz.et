@@ -27,6 +27,12 @@ const tags = {
 
 const projects = [
   {
+    name: "Sirba",
+    code: "https://tangled.org/frectonz.et/sirba",
+    description: "Ethiopian radio stations on your webOS TV",
+    tags: [tags["elm"], tags["nix"]],
+  },
+  {
     name: "Kimem",
     code: "https://tangled.org/frectonz.et/kimem",
     description: "Safaricom Kimem MIFI CLI",
