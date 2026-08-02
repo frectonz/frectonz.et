@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
+    "typecheck": "tsc --noEmit",
+    "check": "prettier --check src --plugin=prettier-plugin-astro",
     "format": "prettier --write src --plugin=prettier-plugin-astro"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.11.1"
+    "prettier-plugin-astro": "^0.11.1",
+    "typescript": "^7.0.2"
   }
 }
