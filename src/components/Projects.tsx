@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FC } from "react";
 import { RxCross2 } from "react-icons/rx/index";
 
 const tags = {
@@ -219,8 +219,16 @@ const projects = [
     name: "To Hearts Bot",
     code: "https://github.com/frectonz/to-hearts-bot",
     url: "https://t.me/to_hearts_bot",
-    description: "The Hearts of OpenAi Telegram Bot",
+    description: "The Hearts of OpenAI Telegram Bot",
     tags: [tags["typescript"], tags["nix"], tags["deno"], tags["telegram"]],
+  },
+  {
+    name: "To Hearts Web App",
+    code: "https://github.com/frectonz/the-hearts-of-openai",
+    url: "https://openai.frectonz.et/",
+    description:
+      "Convert a string into a bunch of heart emojis ❤️🧡💛💚💙💜🖤🤍 OpenAI style.",
+    tags: [tags["elm"], tags["nix"], tags["web"]],
   },
   {
     name: "e/acc card",
@@ -235,14 +243,6 @@ const projects = [
     code: "https://github.com/frectonz/cmd-rs",
     description: "Python's cmd module implemented in Rust via proc-macros",
     tags: [tags["rust"], tags["nix"]],
-  },
-  {
-    name: "The Hearts of OpenAi",
-    code: "https://github.com/frectonz/the-hearts-of-openai",
-    url: "https://openai.frectonz.et/",
-    description:
-      "Convert a string into a bunch of heart emojis ❤️🧡💛💚💙💜🖤🤍 OpenAi style.",
-    tags: [tags["elm"], tags["nix"], tags["web"]],
   },
   {
     name: "Webcam Seeder",
@@ -310,7 +310,7 @@ const projects = [
     tags: [tags["rust"], tags["cli"]],
   },
   {
-    name: "Telegram Export Analyzer",
+    name: "Export Analyzer",
     code: "https://github.com/frectonz/telegram-export-analyzer",
     url: "https://telegram.frectonz.et/",
     description:
@@ -348,6 +348,22 @@ const projects = [
   },
 ];
 
+const Tag: FC<{
+  tag: string;
+  onClick: (tag: string) => void;
+  isRemover?: boolean;
+}> = ({ tag, onClick, isRemover }) => (
+  <button
+    onClick={() => onClick(tag)}
+    className={`border border-black px-2 p-0.5 flex gap-1 items-center whitespace-nowrap ${isRemover ? "bg-black text-white" : "hover:bg-black hover:text-white"}`}
+  >
+    <span>{tag}</span>
+    {isRemover && (
+      <RxCross2 className="ml-1 inline-block bg-black text-white" />
+    )}
+  </button>
+);
+
 export default function Projects() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
@@ -374,24 +390,11 @@ export default function Projects() {
   return (
     <section className="mb-5">
       <div className="flex flex-wrap gap-2 items-center mb-4">
-        {selectedTags.map((tag, i) => (
-          <button
-            key={`selected-${i}`}
-            onClick={() => removeTag(tag)}
-            className="border border-black px-2 p-0.5 flex gap-1 items-center bg-black"
-          >
-            <span className="text-white">{tag}</span>
-            <RxCross2 className="ml-1 inline-block bg-black text-white" />
-          </button>
+        {selectedTags.map((tag) => (
+          <Tag key={tag} tag={tag} isRemover onClick={() => removeTag(tag)} />
         ))}
-        {otherTags.map((tag, i) => (
-          <button
-            key={`other-${i}`}
-            onClick={() => addTag(tag)}
-            className="border border-black px-2 p-0.5 flex gap-1 items-center"
-          >
-            <span>{tag}</span>
-          </button>
+        {otherTags.map((tag) => (
+          <Tag key={tag} tag={tag} onClick={() => addTag(tag)} />
         ))}
       </div>
       <section className="flex gap-5 overflow-x-auto pb-2">
@@ -405,14 +408,8 @@ export default function Projects() {
             </header>
 
             <div className="p-4 border-y border-black flex gap-2 overflow-x-scroll">
-              {project.tags.map((tag, i) => (
-                <button
-                  key={i}
-                  className="border border-black px-2 hover:bg-black hover:text-white whitespace-nowrap"
-                  onClick={() => addTag(tag)}
-                >
-                  {tag}
-                </button>
+              {project.tags.map((tag) => (
+                <Tag key={tag} tag={tag} onClick={() => addTag(tag)} />
               ))}
             </div>
 
