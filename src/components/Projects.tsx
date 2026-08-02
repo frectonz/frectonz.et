@@ -354,66 +354,77 @@ export default function Projects() {
     setSelectedTags(selectedTags.filter((t) => t !== tag));
   };
 
+  const otherTags = Object.values(tags).filter(
+    (tag) => !selectedTags.includes(tag),
+  );
+
+  const filteredProjects = projects.filter(
+    (project) =>
+      selectedTags.length === 0 ||
+      selectedTags.every((tag) => project.tags.includes(tag)),
+  );
+
   return (
     <section className="mb-5">
-      <div className="flex flex-wrap gap-2 items-center">
-        {selectedTags.length !== 0 && (
-          <span className="mr-2">Showing Projects with</span>
-        )}
+      <div className="flex flex-wrap gap-2 items-center mb-4">
         {selectedTags.map((tag, i) => (
           <button
-            key={i}
+            key={`selected-${i}`}
             onClick={() => removeTag(tag)}
-            className="border border-black px-1 p-0.5 flex gap-1 items-center"
+            className="border border-black px-2 p-0.5 flex gap-1 items-center bg-black"
+          >
+            <span className="text-white">{tag}</span>
+            <RxCross2 className="ml-1 inline-block bg-black text-white" />
+          </button>
+        ))}
+        {otherTags.map((tag, i) => (
+          <button
+            key={`other-${i}`}
+            onClick={() => addTag(tag)}
+            className="border border-black px-2 p-0.5 flex gap-1 items-center"
           >
             <span>{tag}</span>
-            <RxCross2 className="ml-1 inline-block bg-black text-white" />
           </button>
         ))}
       </div>
       <section className="flex gap-5 overflow-x-auto pb-2">
-        {projects
-          .filter(
-            (project) =>
-              selectedTags.length === 0 ||
-              selectedTags.every((tag) => project.tags.includes(tag)),
-          )
-          .map((project, i) => (
-            <article
-              key={i}
-              className="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] border border-black box-shadow flex flex-col"
-            >
-              <header className="p-4 border-black">
-                <h1 className="font-serif text-xl font-bold">{project.name}</h1>
-              </header>
+        {filteredProjects.map((project, i) => (
+          <article
+            key={i}
+            className="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] border border-black box-shadow flex flex-col"
+          >
+            <header className="p-4 border-black">
+              <h1 className="font-serif text-xl font-bold">{project.name}</h1>
+            </header>
 
-              <div className="p-4 border-y border-black flex gap-2">
-                {project.tags.map((tag, i) => (
-                  <button
-                    key={i}
-                    className="border border-black px-1 hover:bg-black hover:text-white"
-                    onClick={() => addTag(tag)}
-                  >
-                    {tag}
-                  </button>
-                ))}
-              </div>
+            <div className="p-4 border-y border-black flex gap-2">
+              {project.tags.map((tag, i) => (
+                <button
+                  key={i}
+                  className="border border-black px-1 hover:bg-black hover:text-white"
+                  onClick={() => addTag(tag)}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
 
-              <div className="p-4 flex-grow">
-                <p>{project.description}</p>
-              </div>
-              <footer className="px-4 pb-4 flex gap-4 justify-end">
-                <a href={project.code} className="underline">
-                  Source
+            <div className="p-4 flex-grow">
+              <p>{project.description}</p>
+            </div>
+            <footer className="px-4 pb-4 flex gap-4 justify-end">
+              <a href={project.code} className="underline">
+                Source
+              </a>
+              {project.url && (
+                <a href={project.url} className="underline">
+                  View Project
                 </a>
-                {project.url && (
-                  <a href={project.url} className="underline">
-                    View Project
-                  </a>
-                )}
-              </footer>
-            </article>
-          ))}
+              )}
+            </footer>
+          </article>
+        ))}
+        {filteredProjects.length === 0 && <p>No matching projects</p>}
       </section>
     </section>
   );
