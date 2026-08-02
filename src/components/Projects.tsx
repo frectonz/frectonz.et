@@ -23,9 +23,16 @@ const tags = {
   idris: "Idris",
   kotlin: "Kotlin",
   aws: "AWS",
+  paper: "Paper",
 };
 
 const projects = [
+  {
+    name: "Stego",
+    code: "https://github.com/frectonz/stego",
+    description: "LLM Steganography",
+    tags: [tags["paper"], tags["rust"], tags["nix"]],
+  },
   {
     name: "Sirba",
     code: "https://tangled.org/frectonz.et/sirba",
