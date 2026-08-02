@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Run Flake Check
+        run: nix flake check
+
+      - name: Check Formatting
+        run: nix develop -c pnpm check
+
+      - name: Run Typecheck
+        run: nix develop -c pnpm typecheck
+
+      - name: Build Project
+        run: nix develop -c pnpm build
