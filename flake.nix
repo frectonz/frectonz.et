@@ -1,31 +1,57 @@
 {
-  description = "Nix flake for my portfolio";
+  inputs = {
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
+  };
 
   outputs =
-    { self
-    , nixpkgs
-    , flake-utils
-    }:
-    flake-utils.lib.eachDefaultSystem
-      (system:
-      let
-        pkgs = import nixpkgs { inherit system; };
-      in
-      with pkgs; {
-        devShells.default = mkShell {
-          packages = [
-            nodejs
-            emmet-ls
-            typescript
-            nodePackages.pnpm
-            nodePackages.typescript
-            nodePackages.typescript-language-server
-            nodePackages."@astrojs/language-server"
-            nodePackages.vscode-langservers-extracted
-            nodePackages."@tailwindcss/language-server"
+    { self, nixpkgs }:
+    let
+      forAllSystems =
+        fn:
+        let
+          systems = [
+            "x86_64-linux"
+            "aarch64-darwin"
+          ];
+          overlays = [ ];
+        in
+        nixpkgs.lib.genAttrs systems (
+          system:
+          fn (
+            import nixpkgs {
+              inherit system overlays;
+            }
+          )
+        );
+
+    in
+    {
+      devShells = forAllSystems (pkgs: {
+        default = pkgs.mkShell {
+          buildInputs = [
+            pkgs.pnpm
+            pkgs.nodejs
+            pkgs.emmet-ls
+            pkgs.astro-language-server
+            pkgs.typescript-language-server
+            pkgs.vscode-langservers-extracted
           ];
         };
-
-        formatter = nixpkgs-fmt;
       });
+
+      formatter = forAllSystems (
+        pkgs:
+        pkgs.treefmt.withConfig {
+          runtimeInputs = [ pkgs.nixfmt ];
+          settings = {
+            on-unmatched = "info";
+            formatter.nixfmt = {
+              command = "nixfmt";
+              includes = [ "*.nix" ];
+            };
+          };
+        }
+      );
+
+    };
 }
