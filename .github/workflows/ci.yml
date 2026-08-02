@@ -19,6 +19,9 @@ jobs:
       - name: Run Flake Check
         run: nix flake check
 
+      - name: Install packages
+        run: nix develop -c pnpm install --frozen-lockfile
+
       - name: Check Formatting
         run: nix develop -c pnpm check
 
