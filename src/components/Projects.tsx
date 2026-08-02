@@ -2,27 +2,27 @@ import { useState } from "react";
 import { RxCross2 } from "react-icons/rx/index";
 
 const tags = {
-  ocaml: "OCaml",
-  rescript: "ReScript",
-  terraform: "Terraform",
-  nix: "Nix",
-  ruby: "Ruby",
-  elm: "Elm",
   rust: "Rust",
-  svelte: "Svelte",
-  deno: "Deno",
-  frontend: "Frontend",
+  elm: "Elm",
   typescript: "TypeScript",
   javascript: "JavaScript",
-  telegram: "Telegram",
-  animation: "Animation",
-  terminal: "Terminal",
-  database: "Database",
+  ocaml: "OCaml",
+  rescript: "ReScript",
+  nix: "Nix",
+  ruby: "Ruby",
   elixir: "Elixir",
-  phoenix: "Phoenix",
   idris: "Idris",
   kotlin: "Kotlin",
+  svelte: "Svelte",
+  deno: "Deno",
+  phoenix: "Phoenix",
+  terraform: "Terraform",
   aws: "AWS",
+  database: "Database",
+  web: "Web App",
+  cli: "CLI",
+  telegram: "Telegram",
+  visual: "Visual",
   paper: "Paper",
 };
 
@@ -200,20 +200,20 @@ const projects = [
     code: "https://github.com/frectonz/elm-dama",
     url: "https://dama.frectonz.et/",
     description: "Ethiopian dama game implemented in Elm.",
-    tags: [tags["elm"], tags["nix"], tags["frontend"]],
+    tags: [tags["elm"], tags["nix"], tags["web"]],
   },
   {
     name: "of_base",
     code: "https://github.com/frectonz/of-base",
     url: "https://of-base.frectonz.et",
     description: "Base conversion app for learning rescript.",
-    tags: [tags["rescript"], tags["nix"], tags["frontend"]],
+    tags: [tags["rescript"], tags["nix"], tags["web"]],
   },
   {
     name: "CBE Cash Plot",
     code: "https://github.com/frectonz/cbe_cash_plot",
     description: "Generate a plot of your CBE balance overtime.",
-    tags: [tags["ocaml"], tags["nix"], tags["terminal"]],
+    tags: [tags["ocaml"], tags["nix"], tags["cli"]],
   },
   {
     name: "To Hearts Bot",
@@ -228,7 +228,7 @@ const projects = [
     url: "https://e-acc.frectonz.et/",
     description:
       "A demo for using SVGs as templates to generate images in the browser.",
-    tags: [tags["svelte"], tags["typescript"], tags["nix"], tags["frontend"]],
+    tags: [tags["svelte"], tags["typescript"], tags["nix"], tags["web"]],
   },
   {
     name: "cmd-rs",
@@ -242,25 +242,25 @@ const projects = [
     url: "https://openai.frectonz.et/",
     description:
       "Convert a string into a bunch of heart emojis ❤️🧡💛💚💙💜🖤🤍 OpenAi style.",
-    tags: [tags["elm"], tags["nix"], tags["frontend"]],
+    tags: [tags["elm"], tags["nix"], tags["web"]],
   },
   {
     name: "Webcam Seeder",
     code: "https://github.com/frectonz/webcam-seeder",
     description: "Seed a random number generator using a webcam picture.",
-    tags: [tags["rust"], tags["nix"], tags["terminal"]],
+    tags: [tags["rust"], tags["nix"], tags["cli"]],
   },
   {
     name: "Prime Portraits",
     code: "https://github.com/frectonz/prime-portraits",
     description: "A program that turns images into prime numbers.",
-    tags: [tags["rust"], tags["paper"], tags["nix"], tags["terminal"]],
+    tags: [tags["rust"], tags["paper"], tags["nix"], tags["cli"]],
   },
   {
     name: "Watchbox",
     code: "https://github.com/frectonz/watchbox",
     description: "My personal program for watching movies and shows.",
-    tags: [tags["ocaml"], tags["terminal"]],
+    tags: [tags["ocaml"], tags["cli"]],
   },
   {
     name: "Senamirmir Nixified ",
@@ -285,14 +285,14 @@ const projects = [
     code: "https://github.com/frectonz/super-tic-tac-toe",
     url: "https://tic-tac-toe.frectonz.et/",
     description: "Super Tic-Tac-Toe implemented in Elm.",
-    tags: [tags["elm"], tags["frontend"]],
+    tags: [tags["elm"], tags["web"]],
   },
   {
     name: "Mekuteriya",
     code: "https://github.com/frectonz/mek-ut-er-ya",
     url: "https://asciinema.org/a/539058",
     description: "A simple program for handling Ethiopian calendar dates.",
-    tags: [tags["rust"], tags["terminal"]],
+    tags: [tags["rust"], tags["cli"]],
   },
   {
     name: "Birr Forex Bot",
@@ -307,7 +307,7 @@ const projects = [
     code: "https://github.com/frectonz/snake",
     url: "https://youtu.be/RHeQA1ISvE0",
     description: "A snake game implemented in Rust.",
-    tags: [tags["rust"], tags["terminal"]],
+    tags: [tags["rust"], tags["cli"]],
   },
   {
     name: "Telegram Export Analyzer",
@@ -315,14 +315,14 @@ const projects = [
     url: "https://telegram.frectonz.et/",
     description:
       "An analysis tool that shows you different analytics from data exported from telegram groups.",
-    tags: [tags["typescript"], tags["telegram"], tags["frontend"]],
+    tags: [tags["typescript"], tags["telegram"], tags["web"]],
   },
   {
     name: "Wordle in Elm",
     code: "https://github.com/frectonz/wordle-elm",
     url: "https://wordle.frectonz.et/",
     description: "A wordle clone implemented in Elm.",
-    tags: [tags["elm"], tags["frontend"]],
+    tags: [tags["elm"], tags["web"]],
   },
   {
     name: "MiniTab",
@@ -330,21 +330,21 @@ const projects = [
     url: "https://mini-tab.frectonz.et/",
     description:
       "A beautiful website that shows the time and a random image from unsplash that you can use as a new tab page.",
-    tags: [tags["elm"], tags["frontend"]],
+    tags: [tags["elm"], tags["web"]],
   },
   {
     name: "OXO",
     code: "https://github.com/frectonz/oxo",
     url: "https://oxo.frectonz.et/",
     description: "A tic tac toe game implemented in Elm.",
-    tags: [tags["elm"], tags["frontend"]],
+    tags: [tags["elm"], tags["web"]],
   },
   {
     name: "Gundan",
     code: "https://github.com/frectonz/gundan",
     url: "https://boids.frectonz.et/",
     description: "A boid simulation program.",
-    tags: [tags["typescript"], tags["animation"]],
+    tags: [tags["typescript"], tags["visual"]],
   },
 ];
 
@@ -408,7 +408,7 @@ export default function Projects() {
               {project.tags.map((tag, i) => (
                 <button
                   key={i}
-                  className="border border-black px-1 hover:bg-black hover:text-white"
+                  className="border border-black px-2 hover:bg-black hover:text-white whitespace-nowrap"
                   onClick={() => addTag(tag)}
                 >
                   {tag}
