@@ -254,7 +254,7 @@ const projects = [
     name: "Prime Portraits",
     code: "https://github.com/frectonz/prime-portraits",
     description: "A program that turns images into prime numbers.",
-    tags: [tags["rust"], tags["nix"], tags["terminal"]],
+    tags: [tags["rust"], tags["paper"], tags["nix"], tags["terminal"]],
   },
   {
     name: "Watchbox",
