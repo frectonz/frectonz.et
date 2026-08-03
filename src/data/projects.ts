@@ -6,7 +6,7 @@ export const projects = [
     code: "https://github.com/frectonz/stego",
     url: "https://youtu.be/YEQPft_-9Rk",
     description: "An implementation of a Steganography technique using LLMs.",
-    tags: [tags["paper"], tags["rust"], tags["nix"]],
+    tags: [tags["paper"], tags["rust"], tags["nix"], tags["cli"]],
   },
   {
     name: "Sirba",
@@ -18,21 +18,21 @@ export const projects = [
     name: "Kimem",
     code: "https://tangled.org/frectonz.et/kimem",
     description: "Safaricom Kimem MIFI Router CLI.",
-    tags: [tags["rust"], tags["nix"]],
+    tags: [tags["rust"], tags["nix"], tags["cli"]],
   },
   {
     name: "Penny",
     code: "https://github.com/frectonz/penny",
     url: "https://pennyproxy.com/",
     description: "Serverless for your servers.",
-    tags: [tags["rust"], tags["typescript"], tags["nix"]],
+    tags: [tags["rust"], tags["typescript"], tags["nix"], tags["cli"]],
   },
   {
     name: "PM3",
     code: "https://github.com/frectonz/pm3",
     url: "https://pm3.frectonz.et/",
     description: "A process manager with TOML configuration.",
-    tags: [tags["rust"], tags["nix"]],
+    tags: [tags["rust"], tags["nix"], tags["cli"]],
   },
   {
     name: "SQL Studio",
@@ -47,6 +47,7 @@ export const projects = [
       tags["postgres"],
       tags["sqlite"],
       tags["nix"],
+      tags["cli"],
     ],
   },
   {
@@ -67,19 +68,19 @@ export const projects = [
     code: "https://github.com/frectonz/parenv",
     description:
       "Environment variable parser with a clap style derive macro and elm style error reporting.",
-    tags: [tags["rust"], tags["nix"]],
+    tags: [tags["rust"], tags["nix"], tags["lib"]],
   },
   {
     name: "LC3",
     code: "https://github.com/frectonz/lc3",
     description: "Observable LC3 Virtual Machine.",
-    tags: [tags["ocaml"], tags["nix"]],
+    tags: [tags["ocaml"], tags["nix"], tags["cli"]],
   },
   {
     name: "LC3 Disassembler",
     code: "https://github.com/frectonz/lc3-idris",
     description: "LC3 Disassembler in Idris.",
-    tags: [tags["idris"], tags["nix"]],
+    tags: [tags["idris"], tags["nix"], tags["cli"]],
   },
   {
     name: "media.nix",
@@ -98,14 +99,20 @@ export const projects = [
     name: "Better Auth Fayda",
     code: "https://github.com/frectonz/fayda",
     description: "Better Auth plugin for Fayda.",
-    tags: [tags["typescript"], tags["nix"]],
+    tags: [tags["typescript"], tags["nix"], tags["lib"]],
   },
   {
     name: "schemy",
     code: "https://github.com/frectonz/schemy",
     description:
       "Generates Rust and TypeScript types from Schema.org JSON-LD vocabulary.",
-    tags: [tags["rust"], tags["typescript"], tags["nix"]],
+    tags: [
+      tags["rust"],
+      tags["typescript"],
+      tags["nix"],
+      tags["cli"],
+      tags["lib"],
+    ],
   },
   {
     name: "Octopod",
@@ -118,7 +125,7 @@ export const projects = [
     code: "https://github.com/frectonz/leader-tab",
     description:
       "An algorithm for selecting a leader from all the open tabs of a website.",
-    tags: [tags["typescript"], tags["nix"]],
+    tags: [tags["typescript"], tags["nix"], tags["lib"]],
   },
   {
     name: "vitrum",
@@ -224,7 +231,7 @@ export const projects = [
     name: "cmd-rs",
     code: "https://github.com/frectonz/cmd-rs",
     description: "Python's cmd module implemented in Rust via proc-macros",
-    tags: [tags["rust"], tags["nix"]],
+    tags: [tags["rust"], tags["nix"], tags["lib"]],
   },
   {
     name: "Webcam Seeder",
@@ -248,13 +255,13 @@ export const projects = [
     name: "Senamirmir Nixified ",
     code: "https://github.com/frectonz/senamirmir-nixified",
     description: "Senamirmir fonts packaged as a nix package.",
-    tags: [tags["nix"]],
+    tags: [tags["nix"], tags["font"]],
   },
   {
     name: "Monaspace Nixified ",
     code: "https://github.com/frectonz/monaspace",
     description: "Monaspace fonts packaged as a nix package.",
-    tags: [tags["nix"]],
+    tags: [tags["nix"], tags["font"]],
   },
   {
     name: "Tally Tool",
@@ -267,14 +274,14 @@ export const projects = [
     code: "https://github.com/frectonz/super-tic-tac-toe",
     url: "https://tic-tac-toe.frectonz.et/",
     description: "Super Tic-Tac-Toe implemented in Elm.",
-    tags: [tags["elm"], tags["web"]],
+    tags: [tags["elm"], tags["nix"], tags["web"], tags["game"]],
   },
   {
     name: "Mekuteriya",
     code: "https://github.com/frectonz/mek-ut-er-ya",
     url: "https://asciinema.org/a/539058",
     description: "A simple program for handling Ethiopian calendar dates.",
-    tags: [tags["rust"], tags["cli"]],
+    tags: [tags["rust"], tags["nix"], tags["cli"]],
   },
   {
     name: "Birr Forex Bot",
@@ -289,7 +296,7 @@ export const projects = [
     code: "https://github.com/frectonz/snake",
     url: "https://youtu.be/RHeQA1ISvE0",
     description: "A snake game implemented in Rust.",
-    tags: [tags["rust"], tags["cli"]],
+    tags: [tags["rust"], tags["nix"], tags["cli"], tags["game"]],
   },
   {
     name: "Export Analyzer",
@@ -304,7 +311,7 @@ export const projects = [
     code: "https://github.com/frectonz/wordle-elm",
     url: "https://wordle.frectonz.et/",
     description: "A wordle clone implemented in Elm.",
-    tags: [tags["elm"], tags["web"]],
+    tags: [tags["elm"], tags["web"], tags["game"]],
   },
   {
     name: "MiniTab",
@@ -312,20 +319,20 @@ export const projects = [
     url: "https://mini-tab.frectonz.et/",
     description:
       "A beautiful website that shows the time and a random image from unsplash that you can use as a new tab page.",
-    tags: [tags["elm"], tags["web"]],
+    tags: [tags["elm"], tags["web"], tags["visual"]],
   },
   {
     name: "OXO",
     code: "https://github.com/frectonz/oxo",
     url: "https://oxo.frectonz.et/",
     description: "A tic tac toe game implemented in Elm.",
-    tags: [tags["elm"], tags["web"]],
+    tags: [tags["elm"], tags["web"], tags["game"]],
   },
   {
     name: "Gundan",
     code: "https://github.com/frectonz/gundan",
     url: "https://boids.frectonz.et/",
     description: "A boid simulation program.",
-    tags: [tags["typescript"], tags["visual"]],
+    tags: [tags["typescript"], tags["visual"], tags["nix"]],
   },
 ];

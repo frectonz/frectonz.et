@@ -28,4 +28,6 @@ export const tags = {
   paper: "Paper",
   game: "Game",
   webext: "Web Extension",
+  lib: "Library",
+  font: "Font",
 };
