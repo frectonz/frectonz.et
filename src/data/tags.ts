@@ -11,6 +11,7 @@ export const tags = {
   elixir: "Elixir",
   idris: "Idris",
   kotlin: "Kotlin",
+  python: "Python",
   svelte: "Svelte",
   htmx: "HTMX",
   deno: "Deno",
