@@ -358,7 +358,7 @@ export const projects = [
     tags: [tags["typescript"], tags["web"]],
   },
   {
-    name: "ScienceWordToAmharicBot",
+    name: "ScienceWordToAmharic",
     code: "https://github.com/frectonz/ScienceWordToAmharicBot",
     description:
       "A telegram bot for searching the amharic equivalent of common english scientific words.",

@@ -148,6 +148,29 @@ const stories = [
   },
 ];
 
+const civicProjects = [
+  {
+    name: "rep.et",
+    description:
+      "A civic web app for finding your elected representative in Ethiopia's House of Peoples' Representatives (HOPR)",
+    code: "https://github.com/frectonz/rep.et",
+    url: "https://rep.et",
+  },
+  {
+    name: "audit.et",
+    description:
+      "An independent civic project visualizing audit reports from Ethiopian state-owned enterprises.",
+    code: "https://github.com/frectonz/audit.et",
+    url: "https://audit.et",
+  },
+  {
+    name: "electionwatch.et",
+    description: "Data on Ethiopia's 7th General Election.",
+    code: "https://github.com/frectonz/electionwatch.et",
+    url: "https://electionwatch.et",
+  },
+];
+
 const oss = [
   {
     name: "Better Auth",
@@ -367,127 +390,68 @@ const talks = [
     <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">
       Civic Projects
     </h1>
-    <div class="flex gap-5 overflow-x-auto pb-2">
-      <div
-        class="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] flex flex-col border border-black box-shadow"
-      >
-        <div class="p-4">
-          <h1 class="font-serif text-xl font-bold">rep.et</h1>
-        </div>
-
-        <div class="p-4 border-t border-black flex-grow">
-          <p class="font-serif">
-            A civic web app for finding your elected representative in
-            Ethiopia's House of Peoples' Representatives (HOPR)
-          </p>
-        </div>
-
-        <div class="p-4 flex gap-4 justify-end">
-          <a class="underline" href="https://github.com/frectonz/rep.et">
-            Source
-          </a>
-          <a class="underline" href="https://rep.et"> View Project</a>
-        </div>
-      </div>
-
-      <div
-        class="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] flex flex-col border border-black box-shadow"
-      >
-        <div class="p-4">
-          <h1 class="font-serif text-xl font-bold">audit.et</h1>
-        </div>
-
-        <div class="p-4 border-t border-black flex-grow">
-          <p class="font-serif">
-            An independent civic project visualizing audit reports from
-            Ethiopian state-owned enterprises.
-          </p>
-        </div>
-
-        <div class="p-4 flex gap-4 justify-end">
-          <a class="underline" href="https://github.com/frectonz/audit.et">
-            Source
-          </a>
-          <a class="underline" href="https://audit.et"> View Project</a>
-        </div>
-      </div>
-
-      <div
-        class="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] flex flex-col border border-black box-shadow"
-      >
-        <div class="p-4">
-          <h1 class="font-serif text-xl font-bold">electionwatch.et</h1>
-        </div>
-
-        <div class="p-4 border-t border-black flex-grow">
-          <p class="font-serif">Data on Ethiopia's 7th General Election.</p>
-        </div>
-
-        <div class="p-4 flex gap-4 justify-end">
-          <a
-            class="underline"
-            href="https://github.com/frectonz/electionwatch.et"
-          >
-            Source
-          </a>
-          <a class="underline" href="https://electionwatch.et"> View Project</a>
-        </div>
-      </div>
-    </div>
+    <ul class="flex gap-3 overflow-x-auto pb-2">
+      {
+        civicProjects.map((p) => (
+          <li class="min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px] border border-black box-shadow p-3 flex flex-col gap-1.5">
+            <div class="flex items-baseline justify-between gap-x-3">
+              <h1 class="font-serif font-bold">{p.name}</h1>
+              <div class="flex gap-3 text-sm shrink-0">
+                <a class="underline" href={p.code}>
+                  Source
+                </a>
+                <a class="underline" href={p.url}>
+                  Site
+                </a>
+              </div>
+            </div>
+            <p class="font-serif text-sm leading-snug">{p.description}</p>
+          </li>
+        ))
+      }
+    </ul>
   </section>
 
   <section class="my-6 sm:my-10">
     <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">
       OSS Contributions
     </h1>
-    <div class="flex gap-5 overflow-x-auto pb-2">
+    <ul class="flex gap-3 overflow-x-auto pb-2">
       {
         oss.map((p) => (
-          <div class="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] flex flex-col border border-black box-shadow">
-            <div class="p-4">
-              <h1 class="font-serif text-xl font-bold">{p.name}</h1>
-            </div>
-
-            <div class="p-4 border-t border-black flex-grow">
-              <p class="font-serif">{p.description}</p>
-            </div>
-
-            <div class="p-4 flex justify-end">
-              <a class="underline" href={p.prs}>
-                View PRs
+          <li class="min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px] border border-black box-shadow p-3 flex flex-col gap-1.5">
+            <div class="flex items-baseline justify-between gap-x-3">
+              <h1 class="font-serif font-bold">{p.name}</h1>
+              <a class="underline text-sm shrink-0" href={p.prs}>
+                PRs
               </a>
             </div>
-          </div>
+            <p class="font-serif text-sm leading-snug">{p.description}</p>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </section>
 
   <section class="my-6 sm:my-10">
     <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">
       Language Forks
     </h1>
-    <div class="flex gap-5 overflow-x-auto pb-2">
+    <ul class="flex gap-3 overflow-x-auto pb-2">
       {
         languageForks.map((l) => (
-          <div class="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] flex flex-col border border-black box-shadow">
-            <div class="p-4">
-              <h1 class="font-serif text-xl font-bold">{l.name}</h1>
-            </div>
-
-            <div class="p-4 border-t border-black flex-grow">
-              <p class="font-serif">{l.description}</p>
-            </div>
-
-            <div class="p-4 flex gap-4 justify-end">
-              <a class="underline" href={l.code}>
+          <li class="min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px] border border-black box-shadow p-3 flex flex-col gap-1.5">
+            <div class="flex items-baseline justify-between gap-x-3">
+              <h1 class="font-serif font-bold">{l.name}</h1>
+              <a class="underline text-sm shrink-0" href={l.code}>
                 Source
               </a>
             </div>
-          </div>
+            <p class="font-serif text-sm leading-snug">{l.description}</p>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </section>
 
   <section class="my-6 sm:my-10">

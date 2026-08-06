@@ -57,7 +57,7 @@ export default function Projects() {
         {filteredProjects.map((project, i) => (
           <article
             key={i}
-            className="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] min-h-[350px] border border-black box-shadow flex flex-col"
+            className="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] min-h-[300px] border border-black box-shadow flex flex-col"
           >
             <header className="p-4 border-black">
               <h1 className="font-serif text-xl font-bold">{project.name}</h1>
