@@ -337,6 +337,157 @@ export const projects = [
   },
 
   {
+    name: "WhenWasItBot",
+    code: "https://github.com/frectonz/WhenWasItBot",
+    description:
+      "A telegram bot that sends you the date a message was sent on.",
+    tags: [tags["rust"], tags["telegram"]],
+  },
+  {
+    name: "TaskTower",
+    code: "https://github.com/frectonz/TaskTower",
+    description: "A todo API implementation in Spring.",
+    tags: [tags["java"]],
+  },
+  {
+    name: "Nest Todos API",
+    code: "https://github.com/frectonz/nest-todos-api",
+    description: "A sample API built with NestJS meant to help me learn it.",
+    tags: [tags["typescript"]],
+  },
+  {
+    name: "Hazarda en Java",
+    code: "https://github.com/frectonz/hazarda_en_java",
+    description: "A random number game implemented in Java.",
+    tags: [tags["java"], tags["hazarda"]],
+  },
+  {
+    name: "Hazarda en Kotlin",
+    code: "https://github.com/frectonz/hazarda_en_kotlin",
+    description: "A random number game implemented in Kotlin.",
+    tags: [tags["kotlin"], tags["hazarda"]],
+  },
+  {
+    name: "CardLink",
+    code: "https://github.com/frectonz/CardLink",
+    description: "A LinkTree clone to help me learn AWS.",
+    tags: [tags["terraform"], tags["aws"], tags["rust"], tags["typescript"]],
+  },
+  {
+    name: "Lang Invaders",
+    url: "https://lang-invaders.netlify.app",
+    code: "https://github.com/frectonz/lang-invaders",
+    description:
+      "A space invaders clone written in Elm with programming languages as the enemies.",
+    tags: [tags["elm"], tags["game"], tags["web"]],
+  },
+  {
+    name: "Rampilo",
+    code: "https://github.com/frectonz/rampilo",
+    description: "A telegram crawler.",
+    tags: [tags["rust"], tags["telegram"], tags["cli"]],
+  },
+  {
+    name: "Hazarda en Go",
+    url: "https://asciinema.org/a/525144",
+    code: "https://github.com/frectonz/hazarda_en_go",
+    description: "A random number game implemented in Go.",
+    tags: [tags["go"], tags["hazarda"]],
+  },
+  {
+    name: "Slash Animation",
+    url: "https://asciinema.org/a/539179",
+    code: "https://github.com/frectonz/slash-animation",
+    description: "A terminal animation of slashes.",
+    tags: [tags["typescript"], tags["cli"], tags["visual"]],
+  },
+  {
+    name: "Taqsir Client",
+    url: "https://taqsir.netlify.app",
+    code: "https://github.com/frectonz/taqsir-client",
+    description: "A simple url shortner. The client.",
+    tags: [tags["typescript"], tags["web"]],
+  },
+  {
+    name: "Taqsir Server",
+    code: "https://github.com/frectonz/taqsir-server",
+    description: "A simple url shortner. The server.",
+    tags: [tags["typescript"]],
+  },
+  {
+    name: "Katarogu",
+    url: "https://katarogu.netlify.app",
+    code: "https://github.com/frectonz/katarogu",
+    description: "A crowdsourced catalog of telegram channels.",
+    tags: [tags["elm"], tags["web"]],
+  },
+  {
+    name: "Hazarda en OCaml",
+    url: "https://asciinema.org/a/525144",
+    code: "https://github.com/frectonz/hazarda_en_ocaml",
+    description: "A random number game implemented in OCaml.",
+    tags: [tags["ocaml"], tags["hazarda"]],
+  },
+  {
+    name: "OCaml Exercises",
+    code: "https://github.com/frectonz/ocaml_exercises",
+    description: "Exercises for learning OCaml.",
+    tags: [tags["ocaml"], tags["nix"], tags["exercises"]],
+  },
+  {
+    name: "Ferio",
+    code: "https://github.com/frectonz/ferio",
+    description: "Everyday is a holiday!",
+    tags: [
+      tags["rust"],
+      tags["elm"],
+      tags["cli"],
+      tags["telegram"],
+      tags["web"],
+    ],
+  },
+  {
+    name: "ethiopic-numerals",
+    code: "https://github.com/frectonz/ethiopic-numerals",
+    description:
+      "A rust implementation of an algorithm that converts numbers to ethiopic numerals.",
+    tags: [tags["rust"], tags["lib"]],
+  },
+  {
+    name: "Dodge",
+    url: "https://dodge-creeps.netlify.app",
+    code: "https://github.com/frectonz/dodge",
+    description: "My Implementation of the Godot 2D Example Game.",
+    tags: [tags["godot"], tags["game"]],
+  },
+  {
+    name: "ttp-app",
+    code: "https://github.com/frectonz/ttp-app",
+    description:
+      "An app that generates a truth table from a given logical expression.",
+    tags: [tags["typescript"], tags["rnative"]],
+  },
+  {
+    name: "license-gen",
+    url: "https://asciinema.org/a/496158",
+    code: "https://github.com/frectonz/license-gen",
+    description: "A license generator made with Rust.",
+    tags: [tags["rust"], tags["cli"], tags["nix"]],
+  },
+  {
+    name: "99 Elm Problems",
+    code: "https://github.com/frectonz/99-elm-problems",
+    description: "99 problems solved using Elm.",
+    tags: [tags["elm"], tags["exercises"]],
+  },
+  {
+    name: "Birru CLI",
+    code: "https://github.com/frectonz/birru_cli",
+    description:
+      "A simple CLI tool that fetches and prints birr forex data from the Birru API.",
+    tags: [tags["ocaml"], tags["nix"], tags["cli"]],
+  },
+  {
     name: "Birru",
     code: "https://github.com/frectonz/birru",
     description:

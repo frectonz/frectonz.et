@@ -11,7 +11,11 @@ export const tags = {
   elixir: "Elixir",
   idris: "Idris",
   kotlin: "Kotlin",
+  java: "Java",
   python: "Python",
+  go: "Go",
+  rnative: "ReactNative",
+  godot: "Godot",
   svelte: "Svelte",
   htmx: "HTMX",
   deno: "Deno",
@@ -31,4 +35,6 @@ export const tags = {
   webext: "Web Extension",
   lib: "Library",
   font: "Font",
+  exercises: "Exercises",
+  hazarda: "Hazarda",
 };
