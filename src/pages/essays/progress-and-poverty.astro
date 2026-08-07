@@ -1,229 +1,201 @@
 ---
-import "../../style.css";
+import ProseLayout from "@/layouts/ProseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Progress and Poverty</title>
+<ProseLayout
+  title="Progress and Poverty"
+  gap={6}
+  og={{
+    url: "/essays/progress-and-poverty",
+    image: "/progress-and-poverty.png",
+    imageAlt:
+      "Political cartoon depicting a man labeled ‘Mount George’ in classical attire wrestling a large multi-headed snake attacking a government building.",
+  }}
+>
+  <p>
+    In this article I wanted to talk about the 1879 book “Progress and Poverty"
+    by Henry George, which was very popular in its time and has influenced a lot
+    of the great thinkers of the 19th and 20th century.
+  </p>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Progress and Poverty" />
-    <meta property="og:url" content="/essays/progress-and-poverty" />
-    <meta property="og:image" content="/progress-and-poverty.png" />
-    <meta
-      property="og:image:alt"
-      content="Political cartoon depicting a man labeled ‘Mount George’ in classical attire wrestling a large multi-headed snake attacking a government building."
-    />
-  </head>
-  <body class="mx-5 sm:mx-20">
-    <header class="my-6 sm:my-10 text-center font-serif">
-      <p class="text-base sm:text-xl">
-        <a href="/" class="!no-underline">frectonz's</a>
-      </p>
-      <h1 class="text-3xl sm:text-6xl">Progress and Poverty</h1>
-    </header>
+  <p>
+    There is a fundamental problem with progress that people have noticed since
+    the beginning of the industrial revolution. That is, in any given area where
+    some amount of progress happens, it is often followed by a sharp rise in
+    poverty within that area. These are the regular boom and bust cycles we know
+    from history.
+  </p>
 
-    <main class="container mx-auto p-4 text-lg grid grid-cols-1 gap-6">
-      <p>
-        In this article I wanted to talk about the 1879 book “Progress and
-        Poverty" by Henry George, which was very popular in its time and has
-        influenced a lot of the great thinkers of the 19th and 20th century.
-      </p>
+  <p>To explore how this happens, let’s see the problem in stages.</p>
 
-      <p>
-        There is a fundamental problem with progress that people have noticed
-        since the beginning of the industrial revolution. That is, in any given
-        area where some amount of progress happens, it is often followed by a
-        sharp rise in poverty within that area. These are the regular boom and
-        bust cycles we know from history.
-      </p>
+  <p class="font-bold">Stage 1: Technological Advancement</p>
 
-      <p>To explore how this happens, let’s see the problem in stages.</p>
+  <p>
+    In this stage, a society is introduced to a new technology or a set of new
+    technologies that add a multiplier to that society’s ability to create new
+    goods. One example of this would be farming. Instead of spending hours
+    trying to gather food from a forest, we instead started cultivating crops
+    and growing them purposefully in some prescribed land. This meant that
+    people started getting more food by farming their food instead of gathering
+    them. The same goes for raising livestock. Instead of going out and tracking
+    and hunting animals, we instead domesticated and bred them so we could have
+    them available to use whenever we want, without having to spend hours trying
+    to hunt them down. There is also another obvious example of this, the
+    industrial revolution and the rise of mechanization, which also created a
+    huge surplus of goods just like agriculture.
+  </p>
 
-      <p class="font-bold">Stage 1: Technological Advancement</p>
+  <p>
+    The key thing about these technological advancements is not only that they
+    allow us to do things faster, but the main thing is that they create
+    surpluses. This means that without these kinds of technological
+    advancements, a given good would have only been available to some small
+    number of people, but when you have more, it means everyone will get a
+    share. In the long term, this also creates competition and a fall in prices,
+    which further ensures this effect.
+  </p>
 
-      <p>
-        In this stage, a society is introduced to a new technology or a set of
-        new technologies that add a multiplier to that society’s ability to
-        create new goods. One example of this would be farming. Instead of
-        spending hours trying to gather food from a forest, we instead started
-        cultivating crops and growing them purposefully in some prescribed land.
-        This meant that people started getting more food by farming their food
-        instead of gathering them. The same goes for raising livestock. Instead
-        of going out and tracking and hunting animals, we instead domesticated
-        and bred them so we could have them available to use whenever we want,
-        without having to spend hours trying to hunt them down. There is also
-        another obvious example of this, the industrial revolution and the rise
-        of mechanization, which also created a huge surplus of goods just like
-        agriculture.
-      </p>
+  <p>
+    Surpluses are not only good for consumers; they are also good for producers.
+    More goods to sell to more people means more profits, and they also will
+    have a diversified set of consumers, which further reduces uncertainty in
+    operating the business.
+  </p>
 
-      <p>
-        The key thing about these technological advancements is not only that
-        they allow us to do things faster, but the main thing is that they
-        create surpluses. This means that without these kinds of technological
-        advancements, a given good would have only been available to some small
-        number of people, but when you have more, it means everyone will get a
-        share. In the long term, this also creates competition and a fall in
-        prices, which further ensures this effect.
-      </p>
+  <p>
+    Therefore, these surpluses create wealth for both producers and consumers.
+  </p>
 
-      <p>
-        Surpluses are not only good for consumers; they are also good for
-        producers. More goods to sell to more people means more profits, and
-        they also will have a diversified set of consumers, which further
-        reduces uncertainty in operating the business.
-      </p>
+  <p class="font-bold">Stage 2: Increase in Raw Material Value</p>
 
-      <p>
-        Therefore, these surpluses create wealth for both producers and
-        consumers.
-      </p>
+  <p>
+    In his original book, George describes this stage as the “increase in land
+    value,” but he also then broadens the definition of land as “all natural
+    materials, forces, and opportunities” and anything “that is freely supplied
+    by nature.”
+  </p>
 
-      <p class="font-bold">Stage 2: Increase in Raw Material Value</p>
+  <p>
+    In this stage, as the society’s wealth grows and demand for participation in
+    that society increases, the first thing that happens is the land that this
+    progress is happening on explodes in value. Every landowner starts
+    increasing the rent they collect from their land. Because, in the
+    landowner’s mind, they are not just giving you access to the mere land, they
+    are giving you access to the society and its wealth.
+  </p>
 
-      <p>
-        In his original book, George describes this stage as the “increase in
-        land value,” but he also then broadens the definition of land as “all
-        natural materials, forces, and opportunities” and anything “that is
-        freely supplied by nature.”
-      </p>
+  <p>
+    This effect also happens to other natural resources that the producer
+    depends on. So, even though the reason why that natural resource has any
+    value at all, is that the producer chose to use it to create its output, in
+    this second stage, nearly all the surplus wealth created by the
+    technological advancement starts being sucked out by the rent collecting
+    behavior of the owners of that natural resource.
+  </p>
 
-      <p>
-        In this stage, as the society’s wealth grows and demand for
-        participation in that society increases, the first thing that happens is
-        the land that this progress is happening on explodes in value. Every
-        landowner starts increasing the rent they collect from their land.
-        Because, in the landowner’s mind, they are not just giving you access to
-        the mere land, they are giving you access to the society and its wealth.
-      </p>
+  <p>
+    The same happens with land: even though the reason a given neighborhood
+    develops is due to the industriousness and labor of the people who do their
+    economic activities in that area, as that neighborhood’s wealth starts
+    growing, it will eventually be trapped by the landowners of that
+    neighborhood. I’m sure most of us have experienced this: you move into some
+    underdeveloped area due to it having lower rent, and as more people flow
+    into that area seeking the low rent and start doing economic activities, the
+    wealth of that area increases, and immediately the landowners start
+    increasing their rents.
+  </p>
 
-      <p>
-        This effect also happens to other natural resources that the producer
-        depends on. So, even though the reason why that natural resource has any
-        value at all, is that the producer chose to use it to create its output,
-        in this second stage, nearly all the surplus wealth created by the
-        technological advancement starts being sucked out by the rent collecting
-        behavior of the owners of that natural resource.
-      </p>
+  <p class="font-bold">Stage 3: Stagnation</p>
 
-      <p>
-        The same happens with land: even though the reason a given neighborhood
-        develops is due to the industriousness and labor of the people who do
-        their economic activities in that area, as that neighborhood’s wealth
-        starts growing, it will eventually be trapped by the landowners of that
-        neighborhood. I’m sure most of us have experienced this: you move into
-        some underdeveloped area due to it having lower rent, and as more people
-        flow into that area seeking the low rent and start doing economic
-        activities, the wealth of that area increases, and immediately the
-        landowners start increasing their rents.
-      </p>
+  <p>
+    So, after the rent collecting in stage 2 starts, there is no stopping it.
+    All the progress that was being driven by the surpluses born of the
+    technological advancements suddenly stops. All the surplus starts getting
+    sapped away by the increased rents. This means that the producers have less
+    profit and less value to distribute to their workers. If the workers don’t
+    have money to spend, they start consuming less, which means all the
+    producers they used to buy goods from start having less and less profit.
+    This creates a vicious cycle that converts progress into poverty.
+  </p>
 
-      <p class="font-bold">Stage 3: Stagnation</p>
+  <p>
+    These effects start a death march towards poverty. Since these kinds of
+    effects take some time to become visible, the rent increases will also
+    continue meanwhile, all this destruction is happening.
+  </p>
 
-      <p>
-        So, after the rent collecting in stage 2 starts, there is no stopping
-        it. All the progress that was being driven by the surpluses born of the
-        technological advancements suddenly stops. All the surplus starts
-        getting sapped away by the increased rents. This means that the
-        producers have less profit and less value to distribute to their
-        workers. If the workers don’t have money to spend, they start consuming
-        less, which means all the producers they used to buy goods from start
-        having less and less profit. This creates a vicious cycle that converts
-        progress into poverty.
-      </p>
+  <p>
+    This stagnation starts accelerating the rate of poverty. With poverty come
+    all the socio-economic problems I’m sure we are all very aware of. It is
+    kind of like that golden goose story: by trying to milk out everything they
+    can from the progress machine, they end up destroying it.
+  </p>
 
-      <p>
-        These effects start a death march towards poverty. Since these kinds of
-        effects take some time to become visible, the rent increases will also
-        continue meanwhile, all this destruction is happening.
-      </p>
+  <hr class="block w-full h-4 bg-black" />
 
-      <p>
-        This stagnation starts accelerating the rate of poverty. With poverty
-        come all the socio-economic problems I’m sure we are all very aware of.
-        It is kind of like that golden goose story: by trying to milk out
-        everything they can from the progress machine, they end up destroying
-        it.
-      </p>
+  <p>
+    This framework for understanding the relationship between progress and
+    poverty explains why times of tremendous progress are often quickly followed
+    by a rise in rates of poverty. At the time of its publication, this
+    framework was considered one of the seminal works of economics and was well
+    supported by people from all sides of the political spectrum.
+  </p>
 
-      <hr class="block w-full h-4 bg-black" />
+  <p>
+    George, in his book, doesn’t only describe the problem; he also suggests a
+    solution. George proposes a new tax, the Land Value Tax. The purpose of this
+    tax is to tax away the increase in value of the land that is created due to
+    progress and the economic activities happening on the land. Therefore, this
+    tax eliminates the land hoarding behavior of rent collectors who buy up huge
+    swaths of land, preying on the potential progress that might happen on that
+    land in order to capture it for themselves. This tax will bring an end to
+    the speculative manipulation of landowners.
+  </p>
 
-      <p>
-        This framework for understanding the relationship between progress and
-        poverty explains why times of tremendous progress are often quickly
-        followed by a rise in rates of poverty. At the time of its publication,
-        this framework was considered one of the seminal works of economics and
-        was well supported by people from all sides of the political spectrum.
-      </p>
+  <p>
+    You can think of the Land Value Tax as a national rent. Instead of there
+    being multiple landowners, there would only be one landowner: the
+    government. The Land Value Tax can be thought of as a rent. If a person
+    doesn’t use their land appropriately and come up with enough funds to cover
+    their tax, that land will be taken away from them and given to someone else.
+  </p>
 
-      <p>
-        George, in his book, doesn’t only describe the problem; he also suggests
-        a solution. George proposes a new tax, the Land Value Tax. The purpose
-        of this tax is to tax away the increase in value of the land that is
-        created due to progress and the economic activities happening on the
-        land. Therefore, this tax eliminates the land hoarding behavior of rent
-        collectors who buy up huge swaths of land, preying on the potential
-        progress that might happen on that land in order to capture it for
-        themselves. This tax will bring an end to the speculative manipulation
-        of landowners.
-      </p>
+  <p>
+    Also, the Land Value Tax wouldn’t be a global rate for the whole nation; it
+    will depend on the purpose and the activities being performed on that land.
+    For example, residential areas will have a lower rate than farmland.
+  </p>
 
-      <p>
-        You can think of the Land Value Tax as a national rent. Instead of there
-        being multiple landowners, there would only be one landowner: the
-        government. The Land Value Tax can be thought of as a rent. If a person
-        doesn’t use their land appropriately and come up with enough funds to
-        cover their tax, that land will be taken away from them and given to
-        someone else.
-      </p>
+  <p>
+    Since the value of the land itself is being taxed away, it encourages more
+    productive use of the land. Since the landowner can’t accumulate wealth from
+    the land itself, they will have to build some kind of structure on top of it
+    that will generate profits.
+  </p>
 
-      <p>
-        Also, the Land Value Tax wouldn’t be a global rate for the whole nation;
-        it will depend on the purpose and the activities being performed on that
-        land. For example, residential areas will have a lower rate than
-        farmland.
-      </p>
+  <p>
+    The other great thing about the LVT is that the tax collector is the
+    government, so the government can then use that money to build better
+    infrastructure and provide good social services to its citizens. In his
+    book, George estimates that the revenue generated from this tax would be so
+    great that it would eliminate the need for any other kind of tax. This would
+    mean that consumers wouldn’t need to pay income tax or VAT or anything like
+    that, giving them more money to spend back into the economy. This, paired
+    with the increased funding in infrastructure, creates an effect of
+    accelerating progress instead of limiting it.
+  </p>
 
-      <p>
-        Since the value of the land itself is being taxed away, it encourages
-        more productive use of the land. Since the landowner can’t accumulate
-        wealth from the land itself, they will have to build some kind of
-        structure on top of it that will generate profits.
-      </p>
+  <p>
+    George even suggests distributing the earnings of the revenue to everyone in
+    the country as a citizen stipend. His argument is that the increase in land
+    value only happened because of the work done by all the citizens of the
+    country, so it is rightfully theirs.
+  </p>
 
-      <p>
-        The other great thing about the LVT is that the tax collector is the
-        government, so the government can then use that money to build better
-        infrastructure and provide good social services to its citizens. In his
-        book, George estimates that the revenue generated from this tax would be
-        so great that it would eliminate the need for any other kind of tax.
-        This would mean that consumers wouldn’t need to pay income tax or VAT or
-        anything like that, giving them more money to spend back into the
-        economy. This, paired with the increased funding in infrastructure,
-        creates an effect of accelerating progress instead of limiting it.
-      </p>
-
-      <p>
-        George even suggests distributing the earnings of the revenue to
-        everyone in the country as a citizen stipend. His argument is that the
-        increase in land value only happened because of the work done by all the
-        citizens of the country, so it is rightfully theirs.
-      </p>
-
-      <p>
-        Ever since I heard about this idea, I have been completely infatuated
-        with it. It has greatly increased my interest in economics. I have tried
-        to cover the ideas of Georgism here superficially, but there is a lot
-        more I haven’t mentioned. I urge you to research this topic on your own.
-      </p>
-    </main>
-  </body>
-</html>
+  <p>
+    Ever since I heard about this idea, I have been completely infatuated with
+    it. It has greatly increased my interest in economics. I have tried to cover
+    the ideas of Georgism here superficially, but there is a lot more I haven’t
+    mentioned. I urge you to research this topic on your own.
+  </p>
+</ProseLayout>

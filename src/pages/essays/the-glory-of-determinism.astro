@@ -1,77 +1,53 @@
 ---
-import "../../style.css";
+import ProseLayout from "@/layouts/ProseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>The Glory of Determinism</title>
-  </head>
+<ProseLayout title="The Glory of Determinism">
+  <p>
+    Science is dependent on the universe being objective. When viewed under the
+    assumption of determinism, our universe is analogous to a black box that
+    produces a different output or set of outputs for different inputs. From
+    this, it follows that experimental knowledge is acquired primarily by
+    providing input to the black box and recording the output. The experimenter
+    does this again and again until she has enough data to reverse engineer the
+    process that takes place inside the black box. If determinism is proven to
+    be false, we can no longer be certain that the universe doesn't produce the
+    same outputs for the different inputs. This will render all the knowledge we
+    have acquired from experimentation false. The patterns we see in nature will
+    all have been illusions of order in a random process. If we can't test that
+    a specific input gives a specific output then we can't check if our
+    hypothesis is correct. Determinism is not about the dream of simulating the
+    universe. It is about the hope that our quest for knowledge can bring us
+    closer to the truth.
+  </p>
 
-  <body class="mx-5 sm:mx-20">
-    <header class="my-6 sm:my-10 text-center font-serif">
-      <p class="text-base sm:text-xl">
-        <a href="/" class="!no-underline">frectonz's</a>
-      </p>
-      <h1 class="text-3xl sm:text-6xl">The Glory of Determinism</h1>
-    </header>
+  <p>
+    The idea of determinism has been regarded as an emotional attachment to
+    control and order in the universe. I don't think that is true because
+    determinism is the natural side effect of the way we conduct science. A
+    random universe is much scarier than a deterministic universe. I don't think
+    people realize that. The main reason people fear determinism is that under
+    it people wouldn't be responsible for their actions. It would mean that we
+    are all puppets controlled by the grand calculus of the universe. It would
+    imply that we have no control over our fates. Determinism allows us to see
+    the strings that bound us. In determinism, we can make models of the
+    universe and test their validity, and trust the results of our experiments.
+  </p>
+  <p>
+    Randomness, while giving us freedom and the burden of responsibility, takes
+    a tremendous sacrifice. We must sacrifice our belief that there is a direct
+    relation between cause and effect. Randomness would mean that what happens
+    before is not in any way able to affect what happens after. Theories
+    produced using the scientific method would be no more truthful than their
+    religious or cultural counterparts. We can't definitively know anything
+    about a random universe. A random universe would mean that, we can't light
+    the torch of knowledge in this cave of delusion.
+  </p>
 
-    <main class="container mx-auto p-4 text-lg grid grid-cols-1 gap-4">
-      <p>
-        Science is dependent on the universe being objective. When viewed under
-        the assumption of determinism, our universe is analogous to a black box
-        that produces a different output or set of outputs for different inputs.
-        From this, it follows that experimental knowledge is acquired primarily
-        by providing input to the black box and recording the output. The
-        experimenter does this again and again until she has enough data to
-        reverse engineer the process that takes place inside the black box. If
-        determinism is proven to be false, we can no longer be certain that the
-        universe doesn't produce the same outputs for the different inputs. This
-        will render all the knowledge we have acquired from experimentation
-        false. The patterns we see in nature will all have been illusions of
-        order in a random process. If we can't test that a specific input gives
-        a specific output then we can't check if our hypothesis is correct.
-        Determinism is not about the dream of simulating the universe. It is
-        about the hope that our quest for knowledge can bring us closer to the
-        truth.
-      </p>
-
-      <p>
-        The idea of determinism has been regarded as an emotional attachment to
-        control and order in the universe. I don't think that is true because
-        determinism is the natural side effect of the way we conduct science. A
-        random universe is much scarier than a deterministic universe. I don't
-        think people realize that. The main reason people fear determinism is
-        that under it people wouldn't be responsible for their actions. It would
-        mean that we are all puppets controlled by the grand calculus of the
-        universe. It would imply that we have no control over our fates.
-        Determinism allows us to see the strings that bound us. In determinism,
-        we can make models of the universe and test their validity, and trust
-        the results of our experiments.
-      </p>
-      <p>
-        Randomness, while giving us freedom and the burden of responsibility,
-        takes a tremendous sacrifice. We must sacrifice our belief that there is
-        a direct relation between cause and effect. Randomness would mean that
-        what happens before is not in any way able to affect what happens after.
-        Theories produced using the scientific method would be no more truthful
-        than their religious or cultural counterparts. We can't definitively
-        know anything about a random universe. A random universe would mean
-        that, we can't light the torch of knowledge in this cave of delusion.
-      </p>
-
-      <h2>
-        Read <a
-          class="underline font-serif font-bold"
-          href="https://laplace.frectonz.et">Killing Laplace's Demon</a
-        > for more
-      </h2>
-    </main>
-  </body>
-</html>
+  <h2>
+    Read <a
+      class="underline font-serif font-bold"
+      href="https://laplace.frectonz.et">Killing Laplace's Demon</a
+    > for more
+  </h2>
+</ProseLayout>

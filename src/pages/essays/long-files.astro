@@ -1,196 +1,169 @@
 ---
-import "../../style.css";
+import ProseLayout from "@/layouts/ProseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Long Files</title>
+<ProseLayout
+  title="Long Files"
+  gap={6}
+  og={{
+    url: "/essays/long-files",
+    image: "/long-files.png",
+    imageAlt:
+      "Illustration of a person with a mustache, wearing a cap and coat, riding a giant rooster while holding a stick. The drawing is in a vintage, sketchy style and colored in green.",
+  }}
+>
+  <p>
+    When I program in Rust I have started a recent habit of putting everything
+    in a single file. That means the project starts out as a single <code
+      >main.rs</code
+    > file and ends as a single <code>main.rs</code>, probably a couple thousand
+    lines long. I’ve done this in <a
+      href="https://github.com/frectonz/sql-studio/blob/main/src/main.rs"
+      >sql-studio</a
+    >, <a href="https://github.com/frectonz/ordo/blob/main/src/main.rs">ordo</a
+    >, <a href="https://github.com/frectonz/quizzy/blob/main/src/main.rs"
+      >quizzy</a
+    >, and
+    <a href="https://github.com/frectonz/jabroni/blob/main/src/main.rs"
+      >jabroni</a
+    >.
+  </p>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Long Files" />
-    <meta property="og:url" content="/essays/long-files" />
-    <meta property="og:image" content="/long-files.png" />
-    <meta
-      property="og:image:alt"
-      content="Illustration of a person with a mustache, wearing a cap and coat, riding a giant rooster while holding a stick. The drawing is in a vintage, sketchy style and colored in green."
-    />
-  </head>
-  <body class="mx-5 sm:mx-20">
-    <header class="my-6 sm:my-10 text-center font-serif">
-      <p class="text-base sm:text-xl">
-        <a href="/" class="!no-underline">frectonz's</a>
-      </p>
-      <h1 class="text-3xl sm:text-6xl">Long Files</h1>
-    </header>
+  <p>
+    When people first run into these projects and check out the code, they often
+    think that the code is not structured and is just spaghettified with
+    everything jammed into a single file. That couldn’t be further from the
+    truth. Actually, all of these projects while they are contained in a single
+    file are in fact modularized.
+  </p>
 
-    <main class="container mx-auto p-4 text-lg grid grid-cols-1 gap-6">
-      <p>
-        When I program in Rust I have started a recent habit of putting
-        everything in a single file. That means the project starts out as a
-        single <code>main.rs</code> file and ends as a single <code
-          >main.rs</code
-        >, probably a couple thousand lines long. I’ve done this in <a
-          href="https://github.com/frectonz/sql-studio/blob/main/src/main.rs"
-          >sql-studio</a
-        >, <a href="https://github.com/frectonz/ordo/blob/main/src/main.rs"
-          >ordo</a
-        >, <a href="https://github.com/frectonz/quizzy/blob/main/src/main.rs"
-          >quizzy</a
-        >, and
-        <a href="https://github.com/frectonz/jabroni/blob/main/src/main.rs"
-          >jabroni</a
-        >.
-      </p>
+  <p>
+    We have an interesting feature in Rust called a <a
+      href="https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html"
+      >module</a
+    >. A module is just a namespace that contains a bunch of items like a struct
+    or function, constants, and stuff like that. But it is also not just a
+    namespace, it also allows us to control the visibility of these items. Like,
+    for example, you could put the <code>pub</code> keyword on the items you want
+    to be accessed by other code using this module.
+  </p>
 
-      <p>
-        When people first run into these projects and check out the code, they
-        often think that the code is not structured and is just spaghettified
-        with everything jammed into a single file. That couldn’t be further from
-        the truth. Actually, all of these projects while they are contained in a
-        single file are in fact modularized.
-      </p>
+  <p>
+    The cool thing is, in Rust, these modules don’t have to be separate files.
+    You can have multiple modules in a single file, and they can even be nested.
+    You can have modules inside modules inside modules.
+  </p>
 
-      <p>
-        We have an interesting feature in Rust called a <a
-          href="https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html"
-          >module</a
-        >. A module is just a namespace that contains a bunch of items like a
-        struct or function, constants, and stuff like that. But it is also not
-        just a namespace, it also allows us to control the visibility of these
-        items. Like, for example, you could put the <code>pub</code> keyword on
-        the items you want to be accessed by other code using this module.
-      </p>
+  <p>
+    This is one of the unique features in Rust most beginners don’t notice. We
+    also don’t kinda have “importing” like in other languages. Instead, you use
+    the <code>mod</code> keyword to load a file as a module. Then after loading a
+    module, you can use the <code>use</code> keyword to bring some items from the
+    module into the current context. But you don’t actually have to do that, you can
+    just use their fully qualified name.
+  </p>
 
-      <p>
-        The cool thing is, in Rust, these modules don’t have to be separate
-        files. You can have multiple modules in a single file, and they can even
-        be nested. You can have modules inside modules inside modules.
-      </p>
+  <p>
+    So this module system effectively allows me to structure my code into
+    different modules in a single file, without having to create multiple files.
+    For example, if we look at the sql-studio project, each database driver is
+    implemented in its own module. I have a module of helper functions, there’s
+    a module for defining all the API endpoint handlers, and more. As you can
+    see, the code is definitely modularized into separate specific contexts.
+  </p>
 
-      <p>
-        This is one of the unique features in Rust most beginners don’t notice.
-        We also don’t kinda have “importing” like in other languages. Instead,
-        you use the <code>mod</code> keyword to load a file as a module. Then
-        after loading a module, you can use the <code>use</code> keyword to
-        bring some items from the module into the current context. But you don’t
-        actually have to do that, you can just use their fully qualified name.
-      </p>
+  <p>
+    So at this point, you might be thinking: if you’re gonna modularize your
+    code even though it’s in a single file, why not modularize it into different
+    files?
+  </p>
 
-      <p>
-        So this module system effectively allows me to structure my code into
-        different modules in a single file, without having to create multiple
-        files. For example, if we look at the sql-studio project, each database
-        driver is implemented in its own module. I have a module of helper
-        functions, there’s a module for defining all the API endpoint handlers,
-        and more. As you can see, the code is definitely modularized into
-        separate specific contexts.
-      </p>
+  <p>There are multiple reasons, I’ll try to list some of them here.</p>
 
-      <p>
-        So at this point, you might be thinking: if you’re gonna modularize your
-        code even though it’s in a single file, why not modularize it into
-        different files?
-      </p>
+  <p>
+    The first one is: fewer decisions. People think the task of getting a
+    directory hierarchy right is easy, but I think it takes a bunch of thought
+    to really have a good directory hierarchy for a project. This thought
+    process is done incrementally. It is often rethought every single time you
+    add a feature to the project. Before you even start implementing something,
+    first you gotta think: okay, where would be a good place to implement this?
+    Then I gotta import it here, hook it up with the DB, handle the config
+    there, and stuff. And before you finish, you’ve added 3 or 4 files, each of
+    them with less than 40 lines of code.
+  </p>
 
-      <p>There are multiple reasons, I’ll try to list some of them here.</p>
+  <p>
+    But if you had all your codebase in a single file, you would have made fewer
+    decisions. You would write a couple of functions and call it a day. And in
+    the future, when you see the same structure get repeated, you could wrap all
+    the related implementations into a single module. And after that, once that
+    matures and you want to use it in other projects, that should be the point
+    where you move it to a separate file.
+  </p>
 
-      <p>
-        The first one is: fewer decisions. People think the task of getting a
-        directory hierarchy right is easy, but I think it takes a bunch of
-        thought to really have a good directory hierarchy for a project. This
-        thought process is done incrementally. It is often rethought every
-        single time you add a feature to the project. Before you even start
-        implementing something, first you gotta think: okay, where would be a
-        good place to implement this? Then I gotta import it here, hook it up
-        with the DB, handle the config there, and stuff. And before you finish,
-        you’ve added 3 or 4 files, each of them with less than 40 lines of code.
-      </p>
+  <p>
+    We often don’t think about it, but the file hierarchy is sometimes as
+    important as the code. For a new person trying to understand the codebase,
+    they not only have to understand the code, but they also need to understand
+    the file hierarchy to know how everything is modularized. That could lead
+    new people to the repo astray if it’s not structured well.
+  </p>
 
-      <p>
-        But if you had all your codebase in a single file, you would have made
-        fewer decisions. You would write a couple of functions and call it a
-        day. And in the future, when you see the same structure get repeated,
-        you could wrap all the related implementations into a single module. And
-        after that, once that matures and you want to use it in other projects,
-        that should be the point where you move it to a separate file.
-      </p>
+  <p>
+    Also, I find that the ergonomics of working in a single file are better than
+    jumping between multiple files. It allows you to focus better because you
+    won’t be context switching between multiple files. It helps you delay the
+    task of modularizing some new feature until after the feature is
+    implemented.
+  </p>
 
-      <p>
-        We often don’t think about it, but the file hierarchy is sometimes as
-        important as the code. For a new person trying to understand the
-        codebase, they not only have to understand the code, but they also need
-        to understand the file hierarchy to know how everything is modularized.
-        That could lead new people to the repo astray if it’s not structured
-        well.
-      </p>
+  <p>
+    It also allows you to be aware of all the parts of your codebase as it
+    grows. Implementations won’t be hidden behind multiple files, everything is
+    in a single file.
+  </p>
 
-      <p>
-        Also, I find that the ergonomics of working in a single file are better
-        than jumping between multiple files. It allows you to focus better
-        because you won’t be context switching between multiple files. It helps
-        you delay the task of modularizing some new feature until after the
-        feature is implemented.
-      </p>
+  <p>
+    This kind of work is also a nice refresher since most other languages don’t
+    allow you to create multiple namespaces in a single file. It’s nice to work
+    in a language that does. Since I mostly work on web dev, that’s where I got
+    most of my experience in programming, and what’s often the general knowledge
+    in things like React is that you should separate each component into its own
+    file. Some people even add lints to block files that have more than 300
+    lines or so. It is a nice change of pace from that world.
+  </p>
 
-      <p>
-        It also allows you to be aware of all the parts of your codebase as it
-        grows. Implementations won’t be hidden behind multiple files, everything
-        is in a single file.
-      </p>
+  <p>
+    You should only think about turning something into a separate component file
+    if you are going to use it in multiple other places. Otherwise, you are just
+    making decisions that affect nothing. We should reduce the number of
+    decisions we have to make per day on the cuff around our codebases. We need
+    to reserve most of our decision-making energy for the actual code itself.
+  </p>
 
-      <p>
-        This kind of work is also a nice refresher since most other languages
-        don’t allow you to create multiple namespaces in a single file. It’s
-        nice to work in a language that does. Since I mostly work on web dev,
-        that’s where I got most of my experience in programming, and what’s
-        often the general knowledge in things like React is that you should
-        separate each component into its own file. Some people even add lints to
-        block files that have more than 300 lines or so. It is a nice change of
-        pace from that world.
-      </p>
+  <p>
+    It is a new age belief, by the way, the idea that having multiple small
+    files is better for readability. But if you check out the codebases of older
+    projects, you’ll mostly find a medium number of files, but each of them
+    containing thousands of lines of code.
+  </p>
 
-      <p>
-        You should only think about turning something into a separate component
-        file if you are going to use it in multiple other places. Otherwise, you
-        are just making decisions that affect nothing. We should reduce the
-        number of decisions we have to make per day on the cuff around our
-        codebases. We need to reserve most of our decision-making energy for the
-        actual code itself.
-      </p>
+  <p>
+    Also, an interesting tidbit is that in C, having one long file instead of
+    having multiple smaller ones helps with better performance. Because often, C
+    compilers can do more optimizations if all your code is in a large file. The
+    SQLite project does <a href="https://sqlite.org/amalgamation.html">this</a> for
+    example.
+  </p>
 
-      <p>
-        It is a new age belief, by the way, the idea that having multiple small
-        files is better for readability. But if you check out the codebases of
-        older projects, you’ll mostly find a medium number of files, but each of
-        them containing thousands of lines of code.
-      </p>
-
-      <p>
-        Also, an interesting tidbit is that in C, having one long file instead
-        of having multiple smaller ones helps with better performance. Because
-        often, C compilers can do more optimizations if all your code is in a
-        large file. The SQLite project does <a
-          href="https://sqlite.org/amalgamation.html">this</a
-        > for example.
-      </p>
-
-      <p>
-        So I just wanna say that modularizing doesn’t mean just separating stuff
-        into multiple files. You can modularize stuff in a single file. You just
-        need to have a way to allow yourself to wrap things into smaller in file
-        modules. You can even use classes and functions to modularize your code,
-        even when working in languages that don't support inline modules.
-      </p>
-    </main>
-  </body>
-</html>
+  <p>
+    So I just wanna say that modularizing doesn’t mean just separating stuff
+    into multiple files. You can modularize stuff in a single file. You just
+    need to have a way to allow yourself to wrap things into smaller in file
+    modules. You can even use classes and functions to modularize your code,
+    even when working in languages that don't support inline modules.
+  </p>
+</ProseLayout>
 
 <style>
   a {

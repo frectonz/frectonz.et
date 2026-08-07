@@ -1,8 +1,8 @@
 import { useState, type FC } from "react";
-import { RxCross2 } from "react-icons/rx/index";
+import { RxCross2 } from "react-icons/rx";
 
-import { tags } from "../data/tags";
-import { projects } from "../data/projects";
+import { tags } from "@/data/tags";
+import { projects } from "@/data/projects";
 
 const Tag: FC<{
   tag: string;
@@ -69,7 +69,7 @@ export default function Projects() {
               ))}
             </div>
 
-            <div className="p-4 flex-grow">
+            <div className="p-4 grow">
               <p>{project.description}</p>
             </div>
             <footer className="px-4 pb-4 flex gap-4 justify-end">

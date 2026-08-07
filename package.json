@@ -3,29 +3,34 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "typecheck": "tsc --noEmit",
-    "check": "prettier --check src --plugin=prettier-plugin-astro",
-    "format": "prettier --write src --plugin=prettier-plugin-astro"
+    "typecheck": "astro check && tsc --noEmit",
+    "check": "prettier --check src astro.config.mjs",
+    "format": "prettier --write src astro.config.mjs"
   },
   "dependencies": {
-    "@astrojs/react": "^3.3.4",
-    "@astrojs/tailwind": "^5.1.0",
-    "@types/react": "^18.2.28",
-    "@types/react-dom": "^18.2.13",
-    "astro": "^4.8.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
-    "tailwindcss": "^3.3.3"
+    "@astrojs/react": "^6.0.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-icons": "^5.7.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.11.1",
-    "typescript": "^7.0.2"
+    "@astrojs/check": "^0.9.10",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
   }
 }

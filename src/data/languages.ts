@@ -8,7 +8,7 @@ import {
   SiPython,
   SiTypescript,
   SiJavascript,
-} from "react-icons/si/index";
+} from "react-icons/si";
 
 export const languages = [
   {

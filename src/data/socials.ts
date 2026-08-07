@@ -1,5 +1,5 @@
-import { MdOutlineAlternateEmail } from "react-icons/md/index";
-import { FaGithub, FaTwitter, FaTelegram } from "react-icons/fa/index";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import { FaGithub, FaTwitter, FaTelegram } from "react-icons/fa";
 
 export const socials = [
   {

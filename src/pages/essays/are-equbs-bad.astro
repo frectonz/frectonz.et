@@ -1,143 +1,113 @@
 ---
-import "../../style.css";
+import ProseLayout from "@/layouts/ProseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Are Equbs Bad?</title>
+<ProseLayout
+  title="Are Equbs Bad?"
+  og={{
+    url: "/essays/are-equbs-bad",
+    image: "/equb.png",
+    imageAlt: "A diagram contributions and borrows in an Equb",
+  }}
+>
+  <p>Yes. Essentially, you're lending money without interest.</p>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Are Equbs Bad?" />
-    <meta property="og:url" content="/essays/are-equbs-bad" />
-    <meta property="og:image" content="/equb.png" />
-    <meta
-      property="og:image:alt"
-      content="A diagram contributions and borrows in an Equb"
-    />
-  </head>
-  <body class="mx-5 sm:mx-20">
-    <header class="my-6 sm:my-10 text-center font-serif">
-      <p class="text-base sm:text-xl">
-        <a href="/" class="!no-underline">frectonz's</a>
-      </p>
-      <h1 class="text-3xl sm:text-6xl">Are Equbs Bad?</h1>
-    </header>
+  <p>
+    This article has been labeled "coming soon" for over a year now. Today, I'm
+    finally going to stop procrastinating and write it.
+  </p>
 
-    <main class="container mx-auto p-4 text-lg grid grid-cols-1 gap-4">
-      <p>Yes. Essentially, you're lending money without interest.</p>
+  <p>
+    Okay, time for a story. I never really thought much of equbs before. I just
+    saw them as another way of saving money. This changed when my sister joined
+    an Equb (at her school, I was very surprised). Each member contributed 100
+    ETB per week to the Equb, totaling 10 members. So, every week, one person
+    received 1,000 ETB. That's essentially how Equbs work.
+  </p>
 
-      <p>
-        This article has been labeled "coming soon" for over a year now. Today,
-        I'm finally going to stop procrastinating and write it.
-      </p>
+  <p>
+    At first glance, this may seem like an innocent form of collaboration, but
+    it's not.
+  </p>
 
-      <p>
-        Okay, time for a story. I never really thought much of equbs before. I
-        just saw them as another way of saving money. This changed when my
-        sister joined an Equb (at her school, I was very surprised). Each member
-        contributed 100 ETB per week to the Equb, totaling 10 members. So, every
-        week, one person received 1,000 ETB. That's essentially how Equbs work.
-      </p>
+  <p>
+    People often join Equbs because they have something in mind they want to
+    buy. This was true for my sister as well. I don't remember exactly what she
+    wanted to buy, but I think she needed around 500 ETB for it.
+  </p>
 
-      <p>
-        At first glance, this may seem like an innocent form of collaboration,
-        but it's not.
-      </p>
+  <p>With this context we can move on to the first bad thing about Equbs.</p>
 
-      <p>
-        People often join Equbs because they have something in mind they want to
-        buy. This was true for my sister as well. I don't remember exactly what
-        she wanted to buy, but I think she needed around 500 ETB for it.
-      </p>
+  <h2 class="text-3xl bold my-5">Inflation</h2>
 
-      <p>
-        With this context we can move on to the first bad thing about Equbs.
-      </p>
+  <p>
+    Equbs randomly select one person who hasn't already received a payout in a
+    given cycle on every payout date. This is essentially how they operate,
+    though this rule can be changed based on who needs the money at a particular
+    time.
+  </p>
 
-      <h2 class="text-3xl bold my-5">Inflation</h2>
+  <p>
+    The Equb my sister was in operated on the random selection method. Each
+    week, one person out of the 10 would be selected to receive a payout. After
+    receiving the payout, the person's name would be removed from the drawing
+    pool until the next cycle. My sister got her payout in the 6th week.
+  </p>
 
-      <p>
-        Equbs randomly select one person who hasn't already received a payout in
-        a given cycle on every payout date. This is essentially how they
-        operate, though this rule can be changed based on who needs the money at
-        a particular time.
-      </p>
+  <p>
+    As planned, my sister went to the shop to buy the thing she wanted. She
+    thought she only needed 500 ETB because that was the price when she last
+    checked. However, due to inflation, the price had risen to 700 ETB.
+  </p>
 
-      <p>
-        The Equb my sister was in operated on the random selection method. Each
-        week, one person out of the 10 would be selected to receive a payout.
-        After receiving the payout, the person's name would be removed from the
-        drawing pool until the next cycle. My sister got her payout in the 6th
-        week.
-      </p>
+  <p>
+    Now, let's think this through. With her 1,000 ETB payout from the Equb, she
+    would only have 300 ETB left after buying the item for 700 ETB. If she had
+    received the payout in the first week, she would have paid 500 ETB and still
+    had another 500 ETB left. This is a particularly annoying situation.
+  </p>
 
-      <p>
-        As planned, my sister went to the shop to buy the thing she wanted. She
-        thought she only needed 500 ETB because that was the price when she last
-        checked. However, due to inflation, the price had risen to 700 ETB.
-      </p>
+  <p>
+    Another annoyance was that she received her payout in the 6th week. Since
+    they were contributing 100 ETB per week, she had already saved the money she
+    needed for the purchase by the 5th week, but she had to wait until the 6th
+    week. In this scenario, she would have been better off putting her money
+    under her bed and saving it that way.
+  </p>
 
-      <p>
-        Now, let's think this through. With her 1,000 ETB payout from the Equb,
-        she would only have 300 ETB left after buying the item for 700 ETB. If
-        she had received the payout in the first week, she would have paid 500
-        ETB and still had another 500 ETB left. This is a particularly annoying
-        situation.
-      </p>
+  <p>
+    This makes Equbs very unfair. A person who receives the funds in the first
+    couple of cycles will get more value than someone who receives the funds
+    later on. One solution could be not storing the funds in ETB. Perhaps the
+    group would be better off storing the funds in BTC or USDT.
+  </p>
 
-      <p>
-        Another annoyance was that she received her payout in the 6th week.
-        Since they were contributing 100 ETB per week, she had already saved the
-        money she needed for the purchase by the 5th week, but she had to wait
-        until the 6th week. In this scenario, she would have been better off
-        putting her money under her bed and saving it that way.
-      </p>
+  <h2 class="text-3xl bold my-5">No Interest</h2>
 
-      <p>
-        This makes Equbs very unfair. A person who receives the funds in the
-        first couple of cycles will get more value than someone who receives the
-        funds later on. One solution could be not storing the funds in ETB.
-        Perhaps the group would be better off storing the funds in BTC or USDT.
-      </p>
+  <p>
+    Equbs are peculiar financial systems in that the financial outcome for each
+    member depends on which cycle they receive their funds. The person who
+    receives the funds first is effectively borrowing money without paying any
+    interest; they just have to pay back some of the principal on each cycle.
+    The person who receives the funds last is effectively just lending money
+    without receiving any interest. Combined with inflation, this leaves them in
+    a worse situation than when they started.
+  </p>
 
-      <h2 class="text-3xl bold my-5">No Interest</h2>
+  <img src="/equb.svg" alt="A diagram contributions and borrows in an Equb" />
 
-      <p>
-        Equbs are peculiar financial systems in that the financial outcome for
-        each member depends on which cycle they receive their funds. The person
-        who receives the funds first is effectively borrowing money without
-        paying any interest; they just have to pay back some of the principal on
-        each cycle. The person who receives the funds last is effectively just
-        lending money without receiving any interest. Combined with inflation,
-        this leaves them in a worse situation than when they started.
-      </p>
+  <p>
+    With all this being said, I can effectively say that Equbs are just a less
+    evolved version of banks. Like an Equb, a bank collects money from its
+    members and lends it out to those in need. The borrowers pay back the bank
+    with interest, and the bank can then distribute some of this profit to the
+    people who are storing their money with the bank.
+  </p>
 
-      <img
-        src="/equb.svg"
-        alt="A diagram contributions and borrows in an Equb"
-      />
-
-      <p>
-        With all this being said, I can effectively say that Equbs are just a
-        less evolved version of banks. Like an Equb, a bank collects money from
-        its members and lends it out to those in need. The borrowers pay back
-        the bank with interest, and the bank can then distribute some of this
-        profit to the people who are storing their money with the bank.
-      </p>
-
-      <p>
-        And that's why Equbs are actually bad. Perhaps someone should create a
-        variation of the Equb idea where the funds are stored in BTC, and where
-        people who haven't contributed at least 50% of the payout pay interest,
-        because they are effectively borrowing money.
-      </p>
-    </main>
-  </body>
-</html>
+  <p>
+    And that's why Equbs are actually bad. Perhaps someone should create a
+    variation of the Equb idea where the funds are stored in BTC, and where
+    people who haven't contributed at least 50% of the payout pay interest,
+    because they are effectively borrowing money.
+  </p>
+</ProseLayout>

@@ -1,83 +1,62 @@
 ---
-import "../../style.css";
+import ProseLayout from "@/layouts/ProseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Frameworks and Normalcy</title>
-  </head>
-  <body class="mx-5 sm:mx-20">
-    <header class="my-6 sm:my-10 text-center font-serif">
-      <p class="text-base sm:text-xl">
-        <a href="/" class="!no-underline">frectonz's</a>
-      </p>
-      <h1 class="text-3xl sm:text-6xl">Frameworks and Normalcy</h1>
-    </header>
+<ProseLayout title="Frameworks and Normalcy">
+  <div class="w-fit border border-black p-2 mb-5">
+    <p class="bg-white text-black">normal</p>
+    <p class="italic">/ˈnɔːml/</p>
+    <p class="pl-4">
+      1. <span class="text-highlight">conforming to a standard</span>; usual,
+      typical, or expected.
+    </p>
+  </div>
 
-    <main class="container mx-auto p-4 text-lg grid grid-cols-1 gap-4">
-      <div class="w-fit border border-black p-2 mb-5">
-        <p class="bg-white text-black">normal</p>
-        <p class="italic">/ˈnɔːml/</p>
-        <p class="pl-4">
-          1. <span class="text-highlight">conforming to a standard</span>;
-          usual, typical, or expected.
-        </p>
-      </div>
+  <p>
+    One of the main reasons for the proliferation of development frameworks in
+    the modern software development scene is that they serve an important role
+    in the world of capitalism. Frameworks transform individuals into
+    replaceable, functionally identical units of work we call <span
+      class="text-highlight">Jobs</span
+    >.
+  </p>
 
-      <p>
-        One of the main reasons for the proliferation of development frameworks
-        in the modern software development scene is that they serve an important
-        role in the world of capitalism. Frameworks transform individuals into
-        replaceable, functionally identical units of work we call <span
-          class="text-highlight">Jobs</span
-        >.
-      </p>
+  <p>
+    Frameworks limit the risk a business faces by being dependent on one or a
+    group of individual contributors who are essential for the production of new
+    features and more importantly the maintenance of existing ones. Businesses
+    really like frameworks because frameworks are <span class="text-highlight"
+      >agents of normalcy</span
+    >. Frameworks achieve this by helping simplify the criteria for recruiting
+    new hires into one simple question of having experience with a specific
+    framework.
+  </p>
 
-      <p>
-        Frameworks limit the risk a business faces by being dependent on one or
-        a group of individual contributors who are essential for the production
-        of new features and more importantly the maintenance of existing ones.
-        Businesses really like frameworks because frameworks are <span
-          class="text-highlight">agents of normalcy</span
-        >. Frameworks achieve this by helping simplify the criteria for
-        recruiting new hires into one simple question of having experience with
-        a specific framework.
-      </p>
+  <p>
+    I am convinced that the only value frameworks really have is increasing the
+    replaceability of the programmer. You may have heard this before, but people
+    often use the word <span class="text-highlight"
+      >"maintainability" instead of "replaceability"</span
+    >.
+  </p>
 
-      <p>
-        I am convinced that the only value frameworks really have is increasing
-        the replaceability of the programmer. You may have heard this before,
-        but people often use the word <span class="text-highlight"
-          >"maintainability" instead of "replaceability"</span
-        >.
-      </p>
+  <p>
+    If you want <span class="text-highlight">performance</span>, a pure
+    language-dependency-only implementation for your custom use case will always
+    win in any performance benchmark.
+  </p>
 
-      <p>
-        If you want <span class="text-highlight">performance</span>, a pure
-        language-dependency-only implementation for your custom use case will
-        always win in any performance benchmark.
-      </p>
+  <p>
+    If you want <span class="text-highlight">readability</span>, a custom DSL is
+    the only way to maximize both expressiveness and extensibility of your
+    source code at the same time.
+  </p>
 
-      <p>
-        If you want <span class="text-highlight">readability</span>, a custom
-        DSL is the only way to maximize both expressiveness and extensibility of
-        your source code at the same time.
-      </p>
-
-      <p>
-        Frameworks exist in the middle ground. They can't do both. They just
-        work, without needing anything fancy or creative. This comes with the
-        cost of hiding everything behind "magic" (which is really just, <span
-          class="text-highlight">heaps of abstraction</span
-        >).
-      </p>
-    </main>
-  </body>
-</html>
+  <p>
+    Frameworks exist in the middle ground. They can't do both. They just work,
+    without needing anything fancy or creative. This comes with the cost of
+    hiding everything behind "magic" (which is really just, <span
+      class="text-highlight">heaps of abstraction</span
+    >).
+  </p>
+</ProseLayout>

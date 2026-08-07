@@ -1,79 +1,57 @@
 ---
-import "../../style.css";
+import ProseLayout from "@/layouts/ProseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Sleep is the Enemy</title>
-  </head>
-  <body class="mx-5 sm:mx-20">
-    <header class="my-6 sm:my-10 text-center font-serif">
-      <p class="text-base sm:text-xl">
-        <a href="/" class="!no-underline">frectonz's</a>
-      </p>
-      <h1 class="text-3xl sm:text-6xl">Sleep is the Enemy</h1>
-    </header>
+<ProseLayout title="Sleep is the Enemy">
+  <p>
+    You have 24 hours in a day. The average amount of sleep a person needs per
+    day is 8 hours. Simplified, 8 out of 24 is 1/3. <span class="text-highlight"
+      >We spend 1/3 of our lives sleeping. So yes, sleep is the enemy, or at
+      least, it is one of our enemies.</span
+    >
+  </p>
 
-    <main class="container mx-auto p-4 text-lg grid grid-cols-1 gap-4">
-      <p>
-        You have 24 hours in a day. The average amount of sleep a person needs
-        per day is 8 hours. Simplified, 8 out of 24 is 1/3. <span
-          class="text-highlight"
-          >We spend 1/3 of our lives sleeping. So yes, sleep is the enemy, or at
-          least, it is one of our enemies.</span
-        >
-      </p>
+  <p>I think sleep is a disease we need to cure.</p>
 
-      <p>I think sleep is a disease we need to cure.</p>
+  <p>
+    I believe the search for a cure for sleep is in the same category as the
+    search for immortality. However, <span class="text-highlight"
+      >I think curing sleep seems like a much more achievable goal than solving
+      immortality</span
+    >. This is because there are many things that could kill us (bullet, cancer,
+    food poisoning, a genetic defect), and each of these things is complex
+    enough to need addressing individually, making it futile to try to address
+    them all at once. On the other hand, finding a cure for sleep is, by
+    comparison, a simpler task. Although there are many phenomena associated
+    with sleep in our bodies, they are confined to a few areas, and most of its
+    effects exist via the functioning of our brains.
+  </p>
 
-      <p>
-        I believe the search for a cure for sleep is in the same category as the
-        search for immortality. However, <span class="text-highlight"
-          >I think curing sleep seems like a much more achievable goal than
-          solving immortality</span
-        >. This is because there are many things that could kill us (bullet,
-        cancer, food poisoning, a genetic defect), and each of these things is
-        complex enough to need addressing individually, making it futile to try
-        to address them all at once. On the other hand, finding a cure for sleep
-        is, by comparison, a simpler task. Although there are many phenomena
-        associated with sleep in our bodies, they are confined to a few areas,
-        and most of its effects exist via the functioning of our brains.
-      </p>
+  <p>
+    Giving people back 1/3 of their lives is no joke, so I think it is an
+    important goal. If this cure is found, I don't think people would just stop
+    sleeping; it would just be another option. Sleep’s function is rest and
+    refreshment, and if we have another way to achieve that state, people might
+    sometimes use that method and other times choose the real thing and actually
+    sleep.
+  </p>
 
-      <p>
-        Giving people back 1/3 of their lives is no joke, so I think it is an
-        important goal. If this cure is found, I don't think people would just
-        stop sleeping; it would just be another option. Sleep’s function is rest
-        and refreshment, and if we have another way to achieve that state,
-        people might sometimes use that method and other times choose the real
-        thing and actually sleep.
-      </p>
+  <p>
+    The purpose of having this cure is not just so that people will work all
+    night and all day, though it will be used that way. The purpose of this cure
+    is also so that you could watch a movie overnight without it affecting your
+    need for rest.
+  </p>
 
-      <p>
-        The purpose of having this cure is not just so that people will work all
-        night and all day, though it will be used that way. The purpose of this
-        cure is also so that you could watch a movie overnight without it
-        affecting your need for rest.
-      </p>
+  <p>
+    It would also allow businesses to run for 24 hours, giving the world’s
+    economy a boost.
+  </p>
 
-      <p>
-        It would also allow businesses to run for 24 hours, giving the world’s
-        economy a boost.
-      </p>
-
-      <p>
-        Simply put, <span class="text-highlight"
-          >like trying to solve immortality, the purpose of a cure for sleep
-          would be to give people more time</span
-        >, and people would use their time however they like.
-      </p>
-    </main>
-  </body>
-</html>
+  <p>
+    Simply put, <span class="text-highlight"
+      >like trying to solve immortality, the purpose of a cure for sleep would
+      be to give people more time</span
+    >, and people would use their time however they like.
+  </p>
+</ProseLayout>

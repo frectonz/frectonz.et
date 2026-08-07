@@ -1,319 +1,289 @@
 ---
-import "../../style.css";
+import ProseLayout from "@/layouts/ProseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Private Roads</title>
+<ProseLayout
+  title="Private Roads"
+  gap={6}
+  og={{
+    url: "/essays/private-roads",
+    image: "/private-roads.png",
+    imageAlt:
+      "A road cutting through the Ethiopian highlands on the way to Gondar",
+  }}
+>
+  <p>
+    Roads are incredibly important. Movement of capital, movement of labour,
+    movement of goods, all of these require roads. Having open, safe roads is
+    one of the best accelerators of progress.
+  </p>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Private Roads" />
-    <meta property="og:url" content="/essays/private-roads" />
-    <meta property="og:image" content="/private-roads.png" />
-    <meta
-      property="og:image:alt"
-      content="A road cutting through the Ethiopian highlands on the way to Gondar"
+  <p>
+    Consider Rome and the <a href="https://en.wikipedia.org/wiki/Pax_Romana"
+      >Pax Romana</a
+    >. Much of that was a result of open, safe roads. When the Romans conquered
+    new land, they would build roads between their existing provinces and the
+    newly acquired territory. Not because they simply loved building roads, but
+    because that's how they extracted resources and collected taxes. These roads
+    weren't just used by Roman legionaries either. Merchants and farmers used
+    them to move their goods in and out of places. The Romans were great at <a
+      href="https://en.wikipedia.org/wiki/Roman_roads">building roads</a
+    >.
+  </p>
+
+  <figure>
+    <img
+      src="/roman-road.webp"
+      alt="Via Appia Antica, one of the ancient Roman main roads in Rome, Italy"
     />
-  </head>
-  <body class="mx-5 sm:mx-20">
-    <header class="my-6 sm:my-10 text-center font-serif">
-      <p class="text-base sm:text-xl">
-        <a href="/" class="!no-underline">frectonz's</a>
-      </p>
-      <h1 class="text-3xl sm:text-6xl">Private Roads</h1>
-    </header>
+    <figcaption>
+      <a href="https://en.wikipedia.org/wiki/Appian_Way">Via Appia Antica</a>,
+      one of the oldest Roman roads, still standing in Rome.
+    </figcaption>
+  </figure>
 
-    <main class="container mx-auto p-4 text-lg grid grid-cols-1 gap-6">
-      <p>
-        Roads are incredibly important. Movement of capital, movement of labour,
-        movement of goods, all of these require roads. Having open, safe roads
-        is one of the best accelerators of progress.
-      </p>
+  <p>
+    The Mongol Empire revitalized and secured the ancient <a
+      href="https://en.wikipedia.org/wiki/Silk_Road">Silk Road</a
+    > trade routes during the <a
+      href="https://en.wikipedia.org/wiki/Pax_Mongolica">Pax Mongolica</a
+    >, establishing <a href="https://en.wikipedia.org/wiki/Yam_(route)"
+      >relay stations</a
+    > across the network that kept goods and information flowing. Before the Mongols
+    unified the steppe, these routes were fragmented and dangerous. After unification,
+    a merchant could travel from China to the Mediterranean with relative safety.
+    That's the power of maintained roads.
+  </p>
 
-      <p>
-        Consider Rome and the <a href="https://en.wikipedia.org/wiki/Pax_Romana"
-          >Pax Romana</a
-        >. Much of that was a result of open, safe roads. When the Romans
-        conquered new land, they would build roads between their existing
-        provinces and the newly acquired territory. Not because they simply
-        loved building roads, but because that's how they extracted resources
-        and collected taxes. These roads weren't just used by Roman legionaries
-        either. Merchants and farmers used them to move their goods in and out
-        of places. The Romans were great at <a
-          href="https://en.wikipedia.org/wiki/Roman_roads">building roads</a
-        >.
-      </p>
+  <figure>
+    <img
+      src="/silk-road.webp"
+      alt="Map of the Silk Road and other caravan routes of Eurasia in the 1st century AD"
+    />
+    <figcaption>
+      The Silk Road and other trade routes across Eurasia in the 1st century AD.
+    </figcaption>
+  </figure>
 
-      <figure>
-        <img
-          src="/roman-road.webp"
-          alt="Via Appia Antica, one of the ancient Roman main roads in Rome, Italy"
-        />
-        <figcaption>
-          <a href="https://en.wikipedia.org/wiki/Appian_Way">Via Appia Antica</a
-          >, one of the oldest Roman roads, still standing in Rome.
-        </figcaption>
-      </figure>
+  <p>
+    The Inca had massive road networks too. The <a
+      href="https://en.wikipedia.org/wiki/Qhapaq_%C3%91an">Qhapaq Ñan</a
+    > spanned roughly 40,000 kilometers across the Andes, connecting what is now Colombia
+    down to Chile. It held together an empire that had no wheeled vehicles. The roads
+    were that important.
+  </p>
 
-      <p>
-        The Mongol Empire revitalized and secured the ancient <a
-          href="https://en.wikipedia.org/wiki/Silk_Road">Silk Road</a
-        > trade routes during the <a
-          href="https://en.wikipedia.org/wiki/Pax_Mongolica">Pax Mongolica</a
-        >, establishing <a href="https://en.wikipedia.org/wiki/Yam_(route)"
-          >relay stations</a
-        > across the network that kept goods and information flowing. Before the
-        Mongols unified the steppe, these routes were fragmented and dangerous.
-        After unification, a merchant could travel from China to the
-        Mediterranean with relative safety. That's the power of maintained
-        roads.
-      </p>
+  <figure>
+    <img
+      src="/inca-road.webp"
+      alt="Part of the Inca Trail to Machu Picchu, a stone-paved Inca road in Peru"
+    />
+    <figcaption>
+      Part of the Inca Trail to Machu Picchu, a stone-paved road in Peru.
+    </figcaption>
+  </figure>
 
-      <figure>
-        <img
-          src="/silk-road.webp"
-          alt="Map of the Silk Road and other caravan routes of Eurasia in the 1st century AD"
-        />
-        <figcaption>
-          The Silk Road and other trade routes across Eurasia in the 1st century
-          AD.
-        </figcaption>
-      </figure>
+  <p>
+    The pattern is the same everywhere. More trade means more goods, more taxes,
+    a more powerful empire, more land, more roads, and the cycle keeps going.
+  </p>
 
-      <p>
-        The Inca had massive road networks too. The <a
-          href="https://en.wikipedia.org/wiki/Qhapaq_%C3%91an">Qhapaq Ñan</a
-        > spanned roughly 40,000 kilometers across the Andes, connecting what is
-        now Colombia down to Chile. It held together an empire that had no
-        wheeled vehicles. The roads were that important.
-      </p>
+  <h2 class="text-3xl bold my-5">The Chicken and Egg Problem</h2>
 
-      <figure>
-        <img
-          src="/inca-road.webp"
-          alt="Part of the Inca Trail to Machu Picchu, a stone-paved Inca road in Peru"
-        />
-        <figcaption>
-          Part of the Inca Trail to Machu Picchu, a stone-paved road in Peru.
-        </figcaption>
-      </figure>
+  <p>
+    Now, after talking about why roads are so important, let me talk about the
+    biggest problem we have here in Ethiopia and in most other African
+    countries: we don't have enough roads. About
+    <a
+      href="https://www.ppiaf.org/sites/default/files/documents/2011-01/AICD-Ethiopia-country-report.pdf"
+      >82% of Ethiopia's roads are unpaved</a
+    >. Only about
+    <a
+      href="https://blogs.worldbank.org/en/africacan/what-studies-in-spatial-development-show-in-ethiopia-part-ii"
+      >29% of rural Ethiopians</a
+    >
+    live within 2 kilometers of an all-season road. The road network has grown dramatically,
+    from
+    <a
+      href="https://english.news.cn/africa/20240830/4ddbc79d043b46869421b7122d091c1d/c.html"
+      >26,550 km in 1997 to over 160,000 km today</a
+    >, but with a population of 120 million and a land area of 1.1 million
+    square kilometers, per-capita road density is still very low.
+  </p>
 
-      <p>
-        The pattern is the same everywhere. More trade means more goods, more
-        taxes, a more powerful empire, more land, more roads, and the cycle
-        keeps going.
-      </p>
+  <figure>
+    <img
+      src="/ethiopian-dirt-road.webp"
+      alt="A dirt road stretching through the Ethiopian landscape"
+    />
+    <figcaption>A dirt road in rural Ethiopia.</figcaption>
+  </figure>
 
-      <h2 class="text-3xl bold my-5">The Chicken and Egg Problem</h2>
+  <p>
+    The impact of roads on development is not speculation. A
+    <a
+      href="https://documents1.worldbank.org/curated/en/099332404062230683/pdf/IDU073a7158605532046490b712098aed9008539.pdf"
+      >World Bank study</a
+    >
+    found that access to all-weather roads in Ethiopia reduced poverty by 6.9 percentage
+    points and increased food consumption by nearly 17%. The
+    <a
+      href="https://www.ppiaf.org/sites/default/files/documents/2011-01/AICD-Ethiopia-country-report.pdf"
+      >African Development Bank</a
+    >
+    estimates that closing Ethiopia's infrastructure gap could add 3 percentage points
+    to annual GDP growth.
+  </p>
 
-      <p>
-        Now, after talking about why roads are so important, let me talk about
-        the biggest problem we have here in Ethiopia and in most other African
-        countries: we don't have enough roads. About
-        <a
-          href="https://www.ppiaf.org/sites/default/files/documents/2011-01/AICD-Ethiopia-country-report.pdf"
-          >82% of Ethiopia's roads are unpaved</a
-        >. Only about
-        <a
-          href="https://blogs.worldbank.org/en/africacan/what-studies-in-spatial-development-show-in-ethiopia-part-ii"
-          >29% of rural Ethiopians</a
-        >
-         live within 2 kilometers of an all-season road. The road network has
-        grown dramatically, from
-        <a
-          href="https://english.news.cn/africa/20240830/4ddbc79d043b46869421b7122d091c1d/c.html"
-          >26,550 km in 1997 to over 160,000 km today</a
-        >, but with a population of 120 million and a land area of 1.1 million
-        square kilometers, per-capita road density is still very low.
-      </p>
+  <p>
+    This matters even more for Ethiopia because the country is landlocked.
+    According to a
+    <a
+      href="https://addischamber.com/wp-content/uploads/2024/01/2021-Addis-Chamber-Journal-of-Trade-and-Business-Volume-6.pdf"
+      >study by the Addis Ababa Chamber of Commerce</a
+    >, inland road freight from Djibouti to Addis Ababa alone accounts for about
+    41 to 44% of the total logistics cost of importing goods into the country.
+    For a landlocked country where almost everything moves by truck, the quality
+    of roads is not an abstract policy question. It directly determines the
+    price of every imported and exported good.
+  </p>
 
-      <figure>
-        <img
-          src="/ethiopian-dirt-road.webp"
-          alt="A dirt road stretching through the Ethiopian landscape"
-        />
-        <figcaption>A dirt road in rural Ethiopia.</figcaption>
-      </figure>
+  <p>
+    Building roads requires massive upfront costs. Government revenues are
+    already stretched too thin maintaining and supplying existing road networks.
+    So if an area doesn't have enough economic activity going through it, it
+    won't be a priority and it won't get new roads. This is fundamentally a
+    funding issue. Even if we removed all corruption tomorrow, the government
+    simply does not have the money to build roads everywhere they're needed.
+  </p>
 
-      <p>
-        The impact of roads on development is not speculation. A
-        <a
-          href="https://documents1.worldbank.org/curated/en/099332404062230683/pdf/IDU073a7158605532046490b712098aed9008539.pdf"
-          >World Bank study</a
-        >
-         found that access to all-weather roads in Ethiopia reduced poverty by
-        6.9 percentage points and increased food consumption by nearly 17%. The
-        <a
-          href="https://www.ppiaf.org/sites/default/files/documents/2011-01/AICD-Ethiopia-country-report.pdf"
-          >African Development Bank</a
-        >
-         estimates that closing Ethiopia's infrastructure gap could add 3
-        percentage points to annual GDP growth.
-      </p>
+  <p>
+    But this is a chicken and egg problem. Economic development requires roads,
+    and you can't get the government to build new roads unless there is enough
+    demand for them. Businesses can't set up in an area because there are no
+    roads. The demand for roads won't materialize because there are no
+    businesses. Everybody sits around feeling powerless.
+  </p>
 
-      <p>
-        This matters even more for Ethiopia because the country is landlocked.
-        According to a
-        <a
-          href="https://addischamber.com/wp-content/uploads/2024/01/2021-Addis-Chamber-Journal-of-Trade-and-Business-Volume-6.pdf"
-          >study by the Addis Ababa Chamber of Commerce</a
-        >, inland road freight from Djibouti to Addis Ababa alone accounts for
-        about 41 to 44% of the total logistics cost of importing goods into the
-        country. For a landlocked country where almost everything moves by
-        truck, the quality of roads is not an abstract policy question. It
-        directly determines the price of every imported and exported good.
-      </p>
+  <h2 class="text-3xl bold my-5">Toll Roads as a Solution</h2>
 
-      <p>
-        Building roads requires massive upfront costs. Government revenues are
-        already stretched too thin maintaining and supplying existing road
-        networks. So if an area doesn't have enough economic activity going
-        through it, it won't be a priority and it won't get new roads. This is
-        fundamentally a funding issue. Even if we removed all corruption
-        tomorrow, the government simply does not have the money to build roads
-        everywhere they're needed.
-      </p>
+  <p>
+    How can we solve this? One thing to look at is <a
+      href="https://en.wikipedia.org/wiki/Toll_road">toll roads</a
+    >. You need some entity that can absorb the uncertainty involved in doing
+    any kind of enterprise. That entity is called a company. That's what
+    companies do. They take risk and they get rewarded for it through profit. In
+    this case, one of the uncertainties in building a road is that it might not
+    get used. No matter how unprofitable you think a given route might be,
+    someone will do the proper market research and take the risk. Ethiopia is a
+    market of 120 million people. There is demand.
+  </p>
 
-      <p>
-        But this is a chicken and egg problem. Economic development requires
-        roads, and you can't get the government to build new roads unless there
-        is enough demand for them. Businesses can't set up in an area because
-        there are no roads. The demand for roads won't materialize because there
-        are no businesses. Everybody sits around feeling powerless.
-      </p>
+  <p>
+    Given all of that, any creditor will see the benefit of putting up the funds
+    first and then profiting off the economic growth through toll collection.
+    The people get their chicken and egg problem solved, they can trade their
+    goods freely. Investors are incentivized to put up the initial cost because
+    they will be rewarded tremendously for it.
+  </p>
 
-      <h2 class="text-3xl bold my-5">Toll Roads as a Solution</h2>
+  <figure>
+    <img
+      src="/ethiopian-expressway.webp"
+      alt="The Addis Ababa-Adama Expressway, Ethiopia's first toll road"
+    />
+    <figcaption>
+      The <a
+        href="https://en.wikipedia.org/wiki/Addis_Ababa%E2%80%93Adama_Expressway"
+        >Addis Ababa-Adama Expressway</a
+      >, Ethiopia's first toll road.
+    </figcaption>
+  </figure>
 
-      <p>
-        How can we solve this? One thing to look at is <a
-          href="https://en.wikipedia.org/wiki/Toll_road">toll roads</a
-        >. You need some entity that can absorb the uncertainty involved in
-        doing any kind of enterprise. That entity is called a company. That's
-        what companies do. They take risk and they get rewarded for it through
-        profit. In this case, one of the uncertainties in building a road is
-        that it might not get used. No matter how unprofitable you think a given
-        route might be, someone will do the proper market research and take the
-        risk. Ethiopia is a market of 120 million people. There is demand.
-      </p>
+  <p>
+    To be clear, I'm not just talking about public transportation here. I'm also
+    talking about the transportation of raw materials to factories and products
+    from factories to markets. Imagine the government leasing land from the
+    borders to industrial zones. A private company builds the road, owns it, and
+    is responsible for its upkeep. Other companies pay tolls to use it. The
+    company that built the road has a direct incentive to maintain it well
+    because its revenue depends on it. Just like the Romans built roads for
+    their legionaries but merchants and farmers ended up using them too, these
+    roads will be used by students, merchants, and farmers long after the trucks
+    have passed.
+  </p>
 
-      <p>
-        Given all of that, any creditor will see the benefit of putting up the
-        funds first and then profiting off the economic growth through toll
-        collection. The people get their chicken and egg problem solved, they
-        can trade their goods freely. Investors are incentivized to put up the
-        initial cost because they will be rewarded tremendously for it.
-      </p>
+  <p>
+    This might seem like an aggressive idea, but I think it could be a real
+    win-win situation for everyone involved. The people get a road. For
+    investors, it's a great profit opportunity. The government gets more taxes.
+  </p>
 
-      <figure>
-        <img
-          src="/ethiopian-expressway.webp"
-          alt="The Addis Ababa-Adama Expressway, Ethiopia's first toll road"
-        />
-        <figcaption>
-          The <a
-            href="https://en.wikipedia.org/wiki/Addis_Ababa%E2%80%93Adama_Expressway"
-            >Addis Ababa-Adama Expressway</a
-          >, Ethiopia's first toll road.
-        </figcaption>
-      </figure>
+  <h2 class="text-3xl bold my-5">The Monopoly Problem</h2>
 
-      <p>
-        To be clear, I'm not just talking about public transportation here. I'm
-        also talking about the transportation of raw materials to factories and
-        products from factories to markets. Imagine the government leasing land
-        from the borders to industrial zones. A private company builds the road,
-        owns it, and is responsible for its upkeep. Other companies pay tolls to
-        use it. The company that built the road has a direct incentive to
-        maintain it well because its revenue depends on it. Just like the Romans
-        built roads for their legionaries but merchants and farmers ended up
-        using them too, these roads will be used by students, merchants, and
-        farmers long after the trucks have passed.
-      </p>
+  <p>
+    Of course, this is not all good. A company that decides to build a road to a
+    town will almost certainly want the best route to its destination. After
+    that place's economic outlook improves, the company may raise toll prices to
+    extract more profit. The natural balancing act would be that this creates an
+    opportunity for another company to come in and exploit the opening created
+    by the price hike.
+  </p>
 
-      <p>
-        This might seem like an aggressive idea, but I think it could be a real
-        win-win situation for everyone involved. The people get a road. For
-        investors, it's a great profit opportunity. The government gets more
-        taxes.
-      </p>
+  <p>
+    But the problem is the land the first company leased will almost certainly
+    be the best route. The fastest, the safest, the cheapest to build. The land
+    the second company gets will always be inferior, unless they're building
+    with some new technology that allows them to use routes that were previously
+    unavailable. But this seems like a rare occurrence.
+  </p>
 
-      <h2 class="text-3xl bold my-5">The Monopoly Problem</h2>
+  <p>
+    What I'm trying to say is that it's essentially a zero-sum situation. Once
+    the first company has leased the best route, no one else can use it. At some
+    point, maybe at three or four or five roads, there won't be enough viable
+    routes left. So at best this would be a duopoly or triopoly. There is also
+    the tendency toward mergers and acquisitions, so all those companies could
+    eventually merge into one giant conglomerate, effectively becoming a second
+    government levying their own taxes through toll roads.
+  </p>
 
-      <p>
-        Of course, this is not all good. A company that decides to build a road
-        to a town will almost certainly want the best route to its destination.
-        After that place's economic outlook improves, the company may raise toll
-        prices to extract more profit. The natural balancing act would be that
-        this creates an opportunity for another company to come in and exploit
-        the opening created by the price hike.
-      </p>
+  <h2 class="text-3xl bold my-5">Finding the Balance</h2>
 
-      <p>
-        But the problem is the land the first company leased will almost
-        certainly be the best route. The fastest, the safest, the cheapest to
-        build. The land the second company gets will always be inferior, unless
-        they're building with some new technology that allows them to use routes
-        that were previously unavailable. But this seems like a rare occurrence.
-      </p>
+  <p>
+    There are policy solutions to address this, more competition and strict
+    contracts. Maybe the leases aren't forever. Maybe there's some kind of
+    capped profit rule where the government can renegotiate the lease
+    periodically after a certain profit threshold is reached. Or maybe some kind
+    of <a href="https://en.wikipedia.org/wiki/Land_value_tax">land value tax</a> on
+    the roads instead of normal land leases, where the government could vary the tax
+    it imposes on the road network. You could even pilot this in specific economic
+    zones first and scale up from there.
+  </p>
 
-      <p>
-        What I'm trying to say is that it's essentially a zero-sum situation.
-        Once the first company has leased the best route, no one else can use
-        it. At some point, maybe at three or four or five roads, there won't be
-        enough viable routes left. So at best this would be a duopoly or
-        triopoly. There is also the tendency toward mergers and acquisitions, so
-        all those companies could eventually merge into one giant conglomerate,
-        effectively becoming a second government levying their own taxes through
-        toll roads.
-      </p>
+  <p>
+    This is a delicate balance to strike. You don't want the regulations to be
+    so aggressive that the potential gains become too small for companies to
+    want to build the roads. But you also don't want a free-for-all where they
+    grow too big and exploit the very people we were trying to help.
+  </p>
 
-      <h2 class="text-3xl bold my-5">Finding the Balance</h2>
+  <p>
+    I've been saying "roads" this whole time, but this same logic applies to
+    railroads, bridges, tunnels, and any other transport infrastructure. If a
+    company can profit from building it, and people benefit from using it, the
+    argument holds.
+  </p>
 
-      <p>
-        There are policy solutions to address this, more competition and strict
-        contracts. Maybe the leases aren't forever. Maybe there's some kind of
-        capped profit rule where the government can renegotiate the lease
-        periodically after a certain profit threshold is reached. Or maybe some
-        kind of <a href="https://en.wikipedia.org/wiki/Land_value_tax"
-          >land value tax</a
-        > on the roads instead of normal land leases, where the government could
-        vary the tax it imposes on the road network. You could even pilot this
-        in specific economic zones first and scale up from there.
-      </p>
-
-      <p>
-        This is a delicate balance to strike. You don't want the regulations to
-        be so aggressive that the potential gains become too small for companies
-        to want to build the roads. But you also don't want a free-for-all where
-        they grow too big and exploit the very people we were trying to help.
-      </p>
-
-      <p>
-        I've been saying "roads" this whole time, but this same logic applies to
-        railroads, bridges, tunnels, and any other transport infrastructure. If
-        a company can profit from building it, and people benefit from using it,
-        the argument holds.
-      </p>
-
-      <p>
-        I've brought this idea up in a lot of conversations. I'm not completely
-        sold on it. There are real risks, and getting the regulation right would
-        be hard. But the chicken and egg problem isn't going to solve itself.
-        The cost of doing nothing is already measured in poverty rates and
-        export prices. An imperfect road is better than no road at all. Besides,
-        having private roads feels like some Lee Kuan Yew style 4D chess move,
-        so it's worth a try.
-      </p>
-    </main>
-  </body>
-</html>
+  <p>
+    I've brought this idea up in a lot of conversations. I'm not completely sold
+    on it. There are real risks, and getting the regulation right would be hard.
+    But the chicken and egg problem isn't going to solve itself. The cost of
+    doing nothing is already measured in poverty rates and export prices. An
+    imperfect road is better than no road at all. Besides, having private roads
+    feels like some Lee Kuan Yew style 4D chess move, so it's worth a try.
+  </p>
+</ProseLayout>
 
 <style>
   a {

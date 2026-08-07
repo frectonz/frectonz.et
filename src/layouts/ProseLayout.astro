@@ -1,0 +1,27 @@
+---
+import Layout, { type OpenGraph } from "@/layouts/Layout.astro";
+
+export interface Props {
+  title: string;
+  gap?: 4 | 6;
+  description?: string;
+  og?: OpenGraph;
+}
+
+const { title, gap = 4, description, og } = Astro.props;
+
+const gapClass = gap === 6 ? "gap-6" : "gap-4";
+---
+
+<Layout title={title} description={description} og={og}>
+  <header class="my-6 sm:my-10 text-center font-serif">
+    <p class="text-base sm:text-xl">
+      <a href="/" class="!no-underline">frectonz's</a>
+    </p>
+    <h1 class="text-3xl sm:text-6xl">{title}</h1>
+  </header>
+
+  <main class={`container mx-auto p-4 text-lg grid grid-cols-1 ${gapClass}`}>
+    <slot />
+  </main>
+</Layout>

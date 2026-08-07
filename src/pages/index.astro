@@ -1,26 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 
-import { oss } from "../data/oss";
-import { talks } from "../data/talks";
-import { langs } from "../data/langs";
-import { civic } from "../data/civic";
-import { essays } from "../data/essays";
-import { stories } from "../data/stories";
-import { socials } from "../data/socials";
-import { languages } from "../data/languages";
+import { oss } from "@/data/oss";
+import { talks } from "@/data/talks";
+import { langs } from "@/data/langs";
+import { civic } from "@/data/civic";
+import { essays } from "@/data/essays";
+import { stories } from "@/data/stories";
+import { socials } from "@/data/socials";
+import { languages } from "@/data/languages";
 
-import Projects from "../components/Projects";
+import Projects from "@/components/Projects";
 ---
 
-<Layout title="Frectonz">
+<Layout title="Frectonz" description="frectonz's website">
   <header class="my-6 sm:my-10 grid intro-about-grid gap-5">
     <div class="sm:min-h-[300px] border border-black flex flex-col box-shadow">
       <section
-        class="p-4 flex-grow flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-start"
+        class="p-4 grow flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-start"
       >
         <img
           src="me.webp"
+          alt="Fraol"
           class="w-20 h-20 sm:w-28 sm:h-28 rounded-full border border-black object-cover"
         />
         <h1 class="text-2xl sm:text-4xl">
@@ -196,7 +197,7 @@ import Projects from "../components/Projects";
               <h1 class="font-serif text-xl font-bold">{t.name}</h1>
             </div>
 
-            <div class="p-4 border-t border-black flex-grow">
+            <div class="p-4 border-t border-black grow">
               <p class="font-serif">{t.event}</p>
             </div>
 
