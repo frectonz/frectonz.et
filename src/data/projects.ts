@@ -39,7 +39,7 @@ export const projects = [
     code: "https://github.com/frectonz/sql-studio",
     url: "https://sql-studio.frectonz.et/",
     description:
-      "SQL Database Explorer supports SQLite, libSQL, PostgreSQL, MySQL/MariaDB and DuckDB",
+      "SQL Database Explorer supports SQLite, libSQL, PostgreSQL, MySQL/MariaDB and DuckDB.",
     tags: [
       tags["rust"],
       tags["typescript"],
@@ -131,7 +131,7 @@ export const projects = [
     name: "Vitrum",
     url: "https://vitrum.frectonz.et/",
     code: "https://github.com/frectonz/vitrum",
-    description: "Multi window floating partcles animation",
+    description: "Multi-window floating particles animation.",
     tags: [tags["typescript"], tags["nix"], tags["visual"]],
   },
   {
@@ -156,7 +156,7 @@ export const projects = [
   {
     name: "Jabroni",
     code: "https://github.com/frectonz/jabroni",
-    description: "Query your SQLite DB over WebSockets",
+    description: "Query your SQLite DB over WebSockets.",
     tags: [tags["rust"], tags["database"], tags["sqlite"], tags["nix"]],
   },
   {
@@ -181,7 +181,7 @@ export const projects = [
     name: "Act on Press",
     code: "https://github.com/frectonz/act-on-press",
     description:
-      "A web extension that let's you trigger click actions on press instead of release.",
+      "A web extension that lets you trigger click actions on press instead of release.",
     tags: [tags["javascript"], tags["webext"]],
   },
   {
@@ -192,7 +192,7 @@ export const projects = [
     tags: [tags["elm"], tags["nix"], tags["web"], tags["game"]],
   },
   {
-    name: "of_base",
+    name: "of-base",
     code: "https://github.com/frectonz/of-base",
     url: "https://of-base.frectonz.et",
     description: "Base conversion app for learning rescript.",
@@ -201,14 +201,14 @@ export const projects = [
   {
     name: "CBE Cash Plot",
     code: "https://github.com/frectonz/cbe_cash_plot",
-    description: "Generate a plot of your CBE balance overtime.",
+    description: "Generate a plot of your CBE balance over time.",
     tags: [tags["ocaml"], tags["nix"], tags["cli"]],
   },
   {
     name: "To Hearts Bot",
     code: "https://github.com/frectonz/to-hearts-bot",
     url: "https://t.me/to_hearts_bot",
-    description: "The Hearts of OpenAI Telegram Bot",
+    description: "The Hearts of OpenAI Telegram Bot.",
     tags: [tags["typescript"], tags["nix"], tags["deno"], tags["telegram"]],
   },
   {
@@ -230,7 +230,7 @@ export const projects = [
   {
     name: "cmd-rs",
     code: "https://github.com/frectonz/cmd-rs",
-    description: "Python's cmd module implemented in Rust via proc-macros",
+    description: "Python's cmd module implemented in Rust via proc-macros.",
     tags: [tags["rust"], tags["nix"], tags["lib"]],
   },
   {
@@ -252,13 +252,13 @@ export const projects = [
     tags: [tags["ocaml"], tags["cli"]],
   },
   {
-    name: "Senamirmir Nixified ",
+    name: "Senamirmir Nixified",
     code: "https://github.com/frectonz/senamirmir-nixified",
     description: "Senamirmir fonts packaged as a nix package.",
     tags: [tags["nix"], tags["font"]],
   },
   {
-    name: "Monaspace Nixified ",
+    name: "Monaspace Nixified",
     code: "https://github.com/frectonz/monaspace",
     description: "Monaspace fonts packaged as a nix package.",
     tags: [tags["nix"], tags["font"]],
@@ -337,22 +337,22 @@ export const projects = [
   },
   {
     name: "pg-sqlite-heap",
-    code: "https://github.com/frectonz/pg-when",
-    description: "Just say when.",
-    tags: [tags["rust"], tags["nix"], tags["postgres"], tags["database"]],
-  },
-  {
-    name: "When Is It",
     url: "https://frectonz.github.io/pg-sqlite-heap",
     code: "https://github.com/frectonz/pg-sqlite-heap",
     description: "Store PostgreSQL tables in SQLite files.",
-    tags: [tags["rust"], tags["nix"]],
+    tags: [
+      tags["rust"],
+      tags["nix"],
+      tags["postgres"],
+      tags["sqlite"],
+      tags["database"],
+    ],
   },
   {
-    name: "Feres",
-    code: "https://github.com/frectonz/feres",
-    description: "Feres Ride History Visualizer.",
-    tags: [tags["rust"], tags["elm"], tags["nix"]],
+    name: "When Is It",
+    code: "https://github.com/frectonz/when-is-it",
+    description: "A simple project for testing ollama structured outputs.",
+    tags: [tags["rust"], tags["nix"]],
   },
   {
     name: "Feres",
@@ -432,13 +432,7 @@ export const projects = [
   },
   {
     name: "rescript-lsp-nix",
-    code: "https://github.com/frectonz/scope-tui-nix",
-    description: "The ReScript language server CLI nixified.",
-    tags: [tags["nix"], tags["cli"]],
-  },
-  {
-    name: "rescript-lsp-nix",
-    code: "https://github.com/frectonz/scope-tui-nix",
+    code: "https://github.com/frectonz/rescript-lsp-nix",
     description: "The ReScript language server CLI nixified.",
     tags: [tags["nix"], tags["cli"]],
   },
@@ -451,13 +445,14 @@ export const projects = [
   {
     name: "fl0",
     code: "https://github.com/frectonz/fl0",
-    description: "An incremental computaion library.",
+    description: "An incremental computation library.",
     tags: [tags["typescript"], tags["nix"], tags["lib"]],
   },
   {
     name: "Lessonalyzer",
     code: "https://github.com/frectonz/lessonalyzer",
-    description: "The solar opposite's lessonalyzer built with Bun + Nix.",
+    description:
+      "The lessonalyzer from the Solar Opposites built with Bun + Nix.",
     tags: [tags["javascript"], tags["bun"], tags["nix"], tags["cli"]],
   },
   {
@@ -488,13 +483,13 @@ export const projects = [
   {
     name: "quic-mini-redis",
     code: "https://github.com/frectonz/quic-mini-redis",
-    description: "The tokio mini-redis example re implemented to use QUIC.",
+    description: "The tokio mini-redis example re-implemented to use QUIC.",
     tags: [tags["rust"], tags["nix"], tags["cli"]],
   },
   {
     name: "QUIC Chat",
     code: "https://github.com/frectonz/quic-chat",
-    description: "A random number game implemented in Ruby.",
+    description: "A simple messaging system for learning QUIC.",
     tags: [tags["rust"], tags["go"], tags["nix"], tags["cli"]],
   },
   {
@@ -588,7 +583,7 @@ export const projects = [
   },
   {
     name: "Hazarda en Go",
-    url: "https://asciinema.org/a/525144",
+    url: "https://asciinema.org/a/540934",
     code: "https://github.com/frectonz/hazarda_en_go",
     description: "A random number game implemented in Go.",
     tags: [tags["go"], tags["hazarda"]],
@@ -604,13 +599,13 @@ export const projects = [
     name: "Taqsir Client",
     url: "https://taqsir.netlify.app",
     code: "https://github.com/frectonz/taqsir-client",
-    description: "A simple url shortner. The client.",
+    description: "A simple url shortener. The client.",
     tags: [tags["typescript"], tags["web"]],
   },
   {
     name: "Taqsir Server",
     code: "https://github.com/frectonz/taqsir-server",
-    description: "A simple url shortner. The server.",
+    description: "A simple url shortener. The server.",
     tags: [tags["typescript"]],
   },
   {
@@ -778,8 +773,8 @@ export const projects = [
   {
     name: "Stats Exam",
     url: "https://stats-three.vercel.app",
-    code: "https://github.com/frectonz/truth-table-parser",
-    description: "A web app i made to help me cheat on my math exam.",
+    code: "https://github.com/frectonz/stats-exam",
+    description: "A web app I made to help me cheat on my math exam.",
     tags: [tags["typescript"], tags["web"]],
   },
   {
@@ -787,7 +782,7 @@ export const projects = [
     url: "https://asciinema.org/a/496113",
     code: "https://github.com/frectonz/truth-table-parser",
     description:
-      "A REPL tool and library for generating truth tables from a logical propositio.",
+      "A REPL tool and library for generating truth tables from a logical proposition.",
     tags: [tags["typescript"], tags["cli"]],
   },
   {
