@@ -5,6 +5,7 @@ import { oss } from "@/data/oss";
 import { talks } from "@/data/talks";
 import { langs } from "@/data/langs";
 import { civic } from "@/data/civic";
+import { advent } from "@/data/advent";
 import { essays } from "@/data/essays";
 import { stories } from "@/data/stories";
 import { socials } from "@/data/socials";
@@ -181,6 +182,30 @@ import Projects from "@/components/Projects";
               </a>
             </div>
             <p class="font-serif text-sm leading-snug">{l.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="my-6 sm:my-10">
+    <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">
+      Advent of Code
+    </h1>
+    <ul class="flex gap-3 overflow-x-auto pb-2">
+      {
+        advent.map((a) => (
+          <li class="min-w-[180px] w-[180px] sm:min-w-[220px] sm:w-[220px] border border-black box-shadow p-3 flex flex-col gap-1.5">
+            <div class="flex items-baseline gap-2">
+              <p class="text-xs">Solutions for</p>
+              <h1 class="font-serif font-bold text-xl">{a.year}</h1>
+            </div>
+            <div class="flex items-baseline justify-between gap-x-4">
+              <p class="text-xs">{a.days} days</p>
+              <a class="underline text-sm shrink-0" href={a.code}>
+                Source
+              </a>
+            </div>
           </li>
         ))
       }
