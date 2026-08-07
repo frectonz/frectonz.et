@@ -10,6 +10,7 @@ import { essays } from "@/data/essays";
 import { stories } from "@/data/stories";
 import { socials } from "@/data/socials";
 import { languages } from "@/data/languages";
+import { initiatives } from "@/data/initiatives";
 
 import Projects from "@/components/Projects";
 ---
@@ -81,16 +82,6 @@ import Projects from "@/components/Projects";
     </section>
   </header>
 
-  <section class="my-6 sm:my-10">
-    <p class="text-base sm:text-xl leading-relaxed">
-      I am currently working on a publication called <a
-        href="https://overdueprogress.org"
-        class="bg-black text-white p-0.5">Overdue Progress</a
-      >, dedicated to understanding how progress happens and how to make more of
-      it, with a focus on Africa.
-    </p>
-  </section>
-
   <article>
     <h1 class="font-serif text-xl sm:text-3xl mb-4">
       Programming Languages I work with
@@ -118,6 +109,32 @@ import Projects from "@/components/Projects";
       href="https://github.com/frectonz?tab=repositories"
       class="font-serif underline text-xl">See more on GitHub</a
     >
+  </section>
+
+  <section class="my-6 sm:my-10">
+    <h1 class="text-2xl sm:text-4xl font-serif mb-5 font-bold">
+      Personal Initiatives
+    </h1>
+    <ul class="flex gap-3 overflow-x-auto pb-2">
+      {
+        initiatives.map((p) => (
+          <li class="min-h-[160px] min-w-[380px] w-[380px] border border-black box-shadow p-3 flex flex-col gap-1.5">
+            <div class="flex items-baseline justify-between gap-x-3">
+              <h1 class="font-serif font-bold">{p.name}</h1>
+              <div class="flex gap-3 text-sm shrink-0">
+                <a class="underline" href={p.code}>
+                  Source
+                </a>
+                <a class="underline" href={p.url}>
+                  Site
+                </a>
+              </div>
+            </div>
+            <p class="font-serif text-sm leading-snug">{p.description}</p>
+          </li>
+        ))
+      }
+    </ul>
   </section>
 
   <section class="my-6 sm:my-10">
