@@ -11,7 +11,7 @@ const Tag: FC<{
 }> = ({ tag, onClick, isRemover }) => (
   <button
     onClick={() => onClick(tag)}
-    className={`border border-black px-2 p-0.5 flex gap-1 items-center whitespace-nowrap ${isRemover ? "bg-black text-white" : "hover:bg-black hover:text-white"}`}
+    className={`text-xs border border-black px-2 p-0.5 flex gap-1 items-center whitespace-nowrap ${isRemover ? "bg-black text-white" : "hover:bg-black hover:text-white"}`}
   >
     <span>{tag}</span>
     {isRemover && (
