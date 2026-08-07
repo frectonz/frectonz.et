@@ -1,281 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { FaGithub, FaTwitter, FaTelegram } from "react-icons/fa/index.js";
-import { MdOutlineAlternateEmail } from "react-icons/md/index.js";
-import {
-  SiGo,
-  SiElm,
-  SiRust,
-  SiRuby,
-  SiOcaml,
-  SiNixos,
-  SiPython,
-  SiTypescript,
-  SiJavascript,
-} from "react-icons/si/index.js";
+
+import { oss } from "../data/oss";
+import { talks } from "../data/talks";
+import { langs } from "../data/langs";
+import { civic } from "../data/civic";
+import { essays } from "../data/essays";
+import { stories } from "../data/stories";
+import { socials } from "../data/socials";
+import { languages } from "../data/languages";
 
 import Projects from "../components/Projects";
-
-const socials = [
-  {
-    name: "Twitter",
-    link: "https://twitter.com/frectonz",
-    icon: FaTwitter,
-  },
-  {
-    name: "Github",
-    link: "https://github.com/frectonz",
-    icon: FaGithub,
-  },
-  {
-    name: "Telegram",
-    link: "https://t.me/frectonz",
-    icon: FaTelegram,
-  },
-  {
-    name: "Email",
-    link: "mailto:contact@frectonz.et",
-    icon: MdOutlineAlternateEmail,
-  },
-];
-
-const languages = [
-  {
-    name: "Rust",
-    link: "https://github.com/frectonz?tab=repositories&language=rust",
-    icon: SiRust,
-  },
-  {
-    name: "Elm",
-    link: "https://github.com/frectonz?tab=repositories&language=elm",
-    icon: SiElm,
-  },
-  {
-    name: "TypeScript",
-    link: "https://github.com/frectonz?tab=repositories&language=typescript",
-    icon: SiTypescript,
-  },
-  {
-    name: "JavaScript",
-    link: "https://github.com/frectonz?tab=repositories&language=javascript",
-    icon: SiJavascript,
-  },
-  {
-    name: "Python",
-    link: "https://github.com/frectonz?tab=repositories&language=python",
-    icon: SiPython,
-  },
-  {
-    name: "Go",
-    link: "https://github.com/frectonz?tab=repositories&language=go",
-    icon: SiGo,
-  },
-  {
-    name: "OCaml",
-    link: "https://github.com/frectonz?tab=repositories&language=ocaml",
-    icon: SiOcaml,
-  },
-  {
-    name: "Nix",
-    link: "https://github.com/frectonz?tab=repositories&language=nix",
-    icon: SiNixos,
-  },
-  {
-    name: "Ruby",
-    link: "https://github.com/frectonz?tab=repositories&language=ruby",
-    icon: SiRuby,
-  },
-];
-
-const essays = [
-  {
-    name: "Private Roads",
-    slug: "private-roads",
-    publishedOn: "2026-03-23",
-  },
-  {
-    name: "Long Files",
-    slug: "long-files",
-    publishedOn: "2025-04-11",
-  },
-  {
-    name: "More Engineering",
-    slug: "more-engineering",
-    publishedOn: "2025-04-10",
-  },
-  {
-    name: "Progress and Poverty",
-    slug: "progress-and-poverty",
-    publishedOn: "2025-04-08",
-  },
-  {
-    name: "Blogging",
-    slug: "blogging",
-    publishedOn: "2025-04-07",
-  },
-  {
-    name: "Sleep is the Enemy",
-    slug: "sleep-is-the-enemy",
-    publishedOn: "2024-05-30",
-  },
-  {
-    name: "Are Equbs Bad?",
-    slug: "are-equbs-bad",
-    publishedOn: "2024-05-16",
-  },
-  {
-    name: "Frameworks and Normalcy",
-    slug: "frameworks",
-    publishedOn: "2023-10-17",
-  },
-  {
-    name: "The Glory of Determinism",
-    slug: "the-glory-of-determinism",
-    publishedOn: "2023-04-06",
-  },
-];
-
-const stories = [
-  {
-    name: "Teleportation",
-    slug: "teleportation",
-    publishedOn: "2023-08-20",
-  },
-  {
-    name: "Children of the Real",
-    slug: "children-of-the-real",
-    publishedOn: "2025-04-09",
-  },
-];
-
-const civicProjects = [
-  {
-    name: "rep.et",
-    description:
-      "A civic web app for finding your elected representative in Ethiopia's House of Peoples' Representatives (HOPR)",
-    code: "https://github.com/frectonz/rep.et",
-    url: "https://rep.et",
-  },
-  {
-    name: "audit.et",
-    description:
-      "An independent civic project visualizing audit reports from Ethiopian state-owned enterprises.",
-    code: "https://github.com/frectonz/audit.et",
-    url: "https://audit.et",
-  },
-  {
-    name: "electionwatch.et",
-    description: "Data on Ethiopia's 7th General Election.",
-    code: "https://github.com/frectonz/electionwatch.et",
-    url: "https://electionwatch.et",
-  },
-];
-
-const oss = [
-  {
-    name: "Better Auth",
-    description:
-      "The most comprehensive authentication framework for TypeScript",
-    prs: "https://github.com/better-auth/better-auth/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "nixpkgs",
-    description: "Nix Packages collection & NixOS",
-    prs: "https://github.com/NixOS/nixpkgs/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "Rust",
-    description: "Empowering everyone to build reliable and efficient software",
-    prs: "https://github.com/rust-lang/rust/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "devenv",
-    description:
-      "Fast, Declarative, Reproducible, and Composable Developer Environments using Nix",
-    prs: "https://github.com/cachix/devenv/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "duckdb-rs",
-    description: "Ergonomic bindings to duckdb for Rust",
-    prs: "https://github.com/duckdb/duckdb-rs/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "GQL",
-    description: "SQL like language to perform queries on .git files",
-    prs: "https://github.com/AmrDeveloper/GQL/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "cookie-cutter",
-    description: "Cookie cutter modeling built as a demo project for zoo.dev",
-    prs: "https://github.com/KittyCAD/cookie-cutter/pulls?qa=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "fend",
-    description: "Arbitrary-precision unit-aware calculator",
-    prs: "https://github.com/printfn/fend/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "crates-build-env",
-    description: "Build environment for third-party Rust crates",
-    prs: "https://github.com/rust-lang/crates-build-env/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "muc",
-    description: "Visualize your most used commands",
-    prs: "https://github.com/nate-sys/muc/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-  {
-    name: "piaf",
-    description: "Web library for OCaml with support for HTTP/1.X / HTTP/2",
-    prs: "https://github.com/anmonteiro/piaf/pulls?q=is%3Apr+author%3Afrectonz",
-  },
-];
-
-const languageForks = [
-  {
-    name: "better-go",
-    description:
-      "The go compiler with a try, an unwrap and a new append statement.",
-    code: "https://github.com/frectonz/better-go",
-  },
-  {
-    name: "cpython",
-    description: "The python interpreter forked to rename some keywords.",
-    code: "https://github.com/frectonz/cpython",
-  },
-  {
-    name: "php-src",
-    description:
-      "The php interpreter forked to rename some keywords and remove the dollar sign.",
-    code: "https://github.com/frectonz/php-src",
-  },
-  {
-    name: "go",
-    description:
-      "The Go programming language with keywords renamed and this one supports ethiopic keywords.",
-    code: "https://github.com/frectonz/go",
-  },
-  {
-    name: "TypeScript",
-    description: "The TypeScript compiler with some new keywords.",
-    code: "https://github.com/frectonz/TypeScript",
-  },
-];
-
-const talks = [
-  {
-    name: "Why Niche Tech Deserves a Place in Your Toolkit",
-    event: "DevFest Addis 2024",
-    slides:
-      "https://docs.google.com/presentation/d/15cApRL_VOkxoKnRpKlX0L1QxFMdFytQS3YfQs3E5lrU/",
-  },
-  {
-    name: "The Case for Open Source Companies",
-    event: "Better Hack 2025",
-    slides:
-      "https://www.canva.com/design/DAG0r9eN8Ig/CZzGjiG-Yg-S5FWhaYU0kA/edit",
-  },
-];
 ---
 
 <Layout title="Frectonz">
@@ -389,7 +124,7 @@ const talks = [
     </h1>
     <ul class="flex gap-3 overflow-x-auto pb-2">
       {
-        civicProjects.map((p) => (
+        civic.map((p) => (
           <li class="min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px] border border-black box-shadow p-3 flex flex-col gap-1.5">
             <div class="flex items-baseline justify-between gap-x-3">
               <h1 class="font-serif font-bold">{p.name}</h1>
@@ -436,7 +171,7 @@ const talks = [
     </h1>
     <ul class="flex gap-3 overflow-x-auto pb-2">
       {
-        languageForks.map((l) => (
+        langs.map((l) => (
           <li class="min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px] border border-black box-shadow p-3 flex flex-col gap-1.5">
             <div class="flex items-baseline justify-between gap-x-3">
               <h1 class="font-serif font-bold">{l.name}</h1>
