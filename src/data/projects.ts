@@ -818,4 +818,16 @@ export const projects = [
     description: "My rustlings solutions.",
     tags: [tags["rust"], tags["nix"], tags["exercises"]],
   },
+  {
+    name: "Anansi",
+    code: "https://github.com/frectonz/anansi",
+    description: "A WIP markdown parser.",
+    tags: [tags["rust"], tags["cli"]],
+  },
+  {
+    name: "frectonz.et",
+    code: "https://github.com/frectonz/frectonz.et",
+    description: "This website.",
+    tags: [tags["typescript"], tags["nix"], tags["web"]],
+  },
 ];
