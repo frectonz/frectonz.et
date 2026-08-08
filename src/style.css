@@ -27,8 +27,14 @@ body {
   padding: 0.5px 2px;
 }
 
-.animate-in * {
+.animate-in,
+.animate-in-children > * {
   animation: animate-in 1s ease-in-out;
+}
+
+.no-animate,
+.no-animate * {
+  animation: none !important;
 }
 
 @keyframes animate-in {
