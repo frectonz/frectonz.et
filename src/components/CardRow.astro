@@ -1,0 +1,13 @@
+---
+export interface Props {
+  gap?: 3 | 5;
+}
+
+const { gap = 3 } = Astro.props;
+
+const gapClass = gap === 5 ? "gap-5" : "gap-3";
+---
+
+<ul class:list={["flex overflow-x-auto pb-2", gapClass]}>
+  <slot />
+</ul>

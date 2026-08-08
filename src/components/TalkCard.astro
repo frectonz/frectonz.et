@@ -1,0 +1,27 @@
+---
+import Card from "@/components/Card.astro";
+
+export interface Props {
+  name: string;
+  event: string;
+  slides: string;
+}
+
+const { name, event, slides } = Astro.props;
+---
+
+<Card class="min-w-[400px] w-[400px] flex flex-col">
+  <div class="p-4">
+    <h1 class="font-serif text-xl font-bold">{name}</h1>
+  </div>
+
+  <div class="p-4 border-t border-black grow">
+    <p class="font-serif">{event}</p>
+  </div>
+
+  <div class="p-4 flex gap-4 justify-end">
+    <a class="underline" href={slides} target="_blank" rel="noopener noreferrer"
+      >View Slides</a
+    >
+  </div>
+</Card>

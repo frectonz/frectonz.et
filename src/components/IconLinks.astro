@@ -1,0 +1,31 @@
+---
+import type { IconType } from "react-icons";
+
+export interface IconLink {
+  name: string;
+  link: string;
+  icon: IconType;
+}
+
+export interface Props {
+  links: IconLink[];
+  newTab?: boolean;
+  label?: (name: string) => string;
+}
+
+const { links, newTab = false, label } = Astro.props;
+---
+
+{
+  links.map((item) => (
+    <a
+      href={item.link}
+      title={item.name}
+      aria-label={label ? label(item.name) : item.name}
+      class="hover:scale-110"
+      target={newTab ? "_blank" : undefined}
+    >
+      <item.icon size="2rem" />
+    </a>
+  ))
+}

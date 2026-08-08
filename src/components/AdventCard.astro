@@ -1,0 +1,24 @@
+---
+import Card from "@/components/Card.astro";
+
+export interface Props {
+  year: string;
+  days: number;
+  code: string;
+}
+
+const { year, days, code } = Astro.props;
+---
+
+<Card
+  class="min-w-[180px] w-[180px] sm:min-w-[220px] sm:w-[220px] p-3 flex flex-col gap-1.5"
+>
+  <div class="flex items-baseline gap-2">
+    <p class="text-xs">Solutions for</p>
+    <h1 class="font-serif font-bold text-xl">{year}</h1>
+  </div>
+  <div class="flex items-baseline justify-between gap-x-4">
+    <p class="text-xs">{days} days</p>
+    <a class="underline text-sm shrink-0" href={code}>Source</a>
+  </div>
+</Card>

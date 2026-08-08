@@ -12,6 +12,7 @@ body {
 
 .box-shadow {
   box-shadow: 3px 3px hsla(0, 0%, 0%, 0.5);
+  background-color: white;
 }
 
 @media (min-width: 640px) {
@@ -24,4 +25,19 @@ body {
   color: white;
   background-color: black;
   padding: 0.5px 2px;
+}
+
+.animate-in * {
+  animation: animate-in 1s ease-in-out;
+}
+
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

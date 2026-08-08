@@ -1,0 +1,38 @@
+---
+import Card from "@/components/Card.astro";
+
+export interface CardLink {
+  label: string;
+  href: string;
+}
+
+export interface Props {
+  name: string;
+  description: string;
+  links: CardLink[];
+  size?: "default" | "wide";
+}
+
+const { name, description, links, size = "default" } = Astro.props;
+
+const sizeClass =
+  size === "wide"
+    ? "min-h-[160px] min-w-[380px] w-[380px]"
+    : "min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px]";
+---
+
+<Card class={`${sizeClass} p-3 flex flex-col gap-1.5`}>
+  <div class="flex items-baseline justify-between gap-x-3">
+    <h1 class="font-serif font-bold">{name}</h1>
+    <div class="flex gap-3 text-sm shrink-0">
+      {
+        links.map((link) => (
+          <a class="underline" href={link.href}>
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <p class="font-serif text-sm leading-snug">{description}</p>
+</Card>

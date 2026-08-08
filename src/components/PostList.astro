@@ -1,0 +1,34 @@
+---
+import Card from "@/components/Card.astro";
+
+export interface Post {
+  name: string;
+  slug: string;
+  publishedOn: string;
+}
+
+export interface Props {
+  posts: Post[];
+  base: string;
+}
+
+const { posts, base } = Astro.props;
+---
+
+<ul class="grid grid-cols-1 gap-3">
+  {
+    posts.map((post) => (
+      <Card>
+        <a
+          href={`${base}/${post.slug}`}
+          class="flex flex-col sm:flex-row sm:justify-between transition-colors hover:bg-black hover:text-white"
+        >
+          <h1 class="p-2">{post.name}</h1>
+          <p class="border-t sm:border-t-0 sm:border-l border-black p-2 font-serif">
+            {post.publishedOn}
+          </p>
+        </a>
+      </Card>
+    ))
+  }
+</ul>
