@@ -1,11 +1,16 @@
 import { MdOutlineAlternateEmail } from "react-icons/md";
-import { FaGithub, FaTwitter, FaTelegram } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaTelegram, FaBluesky } from "react-icons/fa6";
 
 export const socials = [
   {
     name: "Twitter",
     link: "https://twitter.com/frectonz",
     icon: FaTwitter,
+  },
+  {
+    name: "Bluesky",
+    link: "https://bsky.app/profile/frectonz.et",
+    icon: FaBluesky,
   },
   {
     name: "Github",
