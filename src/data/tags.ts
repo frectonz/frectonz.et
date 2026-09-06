@@ -1,6 +1,7 @@
 export const tags = {
   rust: "Rust",
   elm: "Elm",
+  acadia: "Acadia",
   typescript: "TypeScript",
   javascript: "JavaScript",
   ocaml: "OCaml",

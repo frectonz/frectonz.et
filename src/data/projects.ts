@@ -2,6 +2,12 @@ import { tags } from "./tags";
 
 export const projects = [
   {
+    name: "Learn Acadia",
+    code: "https://tangled.org/frectonz.et/learn-acadia",
+    description: "A learning exercise with Acadia.",
+    tags: [tags["database"], tags["elm"], tags["acadia"], tags["nix"]],
+  },
+  {
     name: "Stego",
     code: "https://github.com/frectonz/stego",
     url: "https://youtu.be/YEQPft_-9Rk",
