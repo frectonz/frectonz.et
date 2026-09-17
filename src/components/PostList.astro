@@ -21,10 +21,10 @@ const { posts, base } = Astro.props;
       <Card>
         <a
           href={`${base}/${post.slug}`}
-          class="flex flex-col sm:flex-row sm:justify-between transition-colors hover:bg-black hover:text-white"
+          class="flex flex-col sm:flex-row sm:justify-between transition-colors hover:bg-ink hover:text-paper"
         >
           <h1 class="p-2">{post.name}</h1>
-          <p class="border-t sm:border-t-0 sm:border-l border-black p-2 font-serif">
+          <p class="border-t sm:border-t-0 sm:border-l border-ink p-2 font-serif">
             {post.publishedOn}
           </p>
         </a>

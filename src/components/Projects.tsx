@@ -11,12 +11,10 @@ const Tag: FC<{
 }> = ({ tag, onClick, isRemover }) => (
   <button
     onClick={() => onClick(tag)}
-    className={`text-xs border border-black px-2 p-0.5 flex gap-1 items-center whitespace-nowrap cursor-pointer ${isRemover ? "bg-black text-white" : "bg-white hover:bg-black hover:text-white"}`}
+    className={`text-xs border border-ink px-2 p-0.5 flex gap-1 items-center whitespace-nowrap cursor-pointer ${isRemover ? "bg-ink text-paper" : "bg-paper hover:bg-ink hover:text-paper"}`}
   >
     <span>{tag}</span>
-    {isRemover && (
-      <RxCross2 className="ml-1 inline-block bg-black text-white" />
-    )}
+    {isRemover && <RxCross2 className="ml-1 inline-block bg-ink text-paper" />}
   </button>
 );
 
@@ -57,13 +55,13 @@ export default function Projects() {
         {filteredProjects.map((project, i) => (
           <article
             key={i}
-            className="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] min-h-[300px] border border-black box-shadow flex flex-col"
+            className="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] min-h-[300px] border border-ink box-shadow flex flex-col"
           >
-            <header className="p-4 border-black">
+            <header className="p-4 border-ink">
               <h1 className="font-serif text-xl font-bold">{project.name}</h1>
             </header>
 
-            <div className="p-4 border-y border-black flex gap-2 overflow-x-scroll">
+            <div className="p-4 border-y border-ink flex gap-2 overflow-x-scroll">
               {project.tags.map((tag) => (
                 <Tag key={tag} tag={tag} onClick={() => addTag(tag)} />
               ))}
