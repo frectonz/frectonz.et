@@ -10,18 +10,17 @@ export interface Props {
 const { name, event, slides } = Astro.props;
 ---
 
-<Card class="min-w-[400px] w-[400px] flex flex-col">
-  <div class="p-4">
-    <h1 class="font-serif text-xl font-bold">{name}</h1>
-  </div>
-
-  <div class="p-4 border-t border-ink grow">
-    <p class="font-serif">{event}</p>
-  </div>
-
-  <div class="p-4 flex gap-4 justify-end">
-    <a class="underline" href={slides} target="_blank" rel="noopener noreferrer"
-      >View Slides</a
+<Card
+  class="min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px] p-3 flex flex-col gap-1.5"
+>
+  <div class="flex items-baseline justify-between gap-x-3">
+    <h1 class="font-serif font-bold">{name}</h1>
+    <a
+      class="underline text-sm shrink-0"
+      href={slides}
+      target="_blank"
+      rel="noopener noreferrer">Slides</a
     >
   </div>
+  <p class="font-serif text-sm leading-snug">{event}</p>
 </Card>

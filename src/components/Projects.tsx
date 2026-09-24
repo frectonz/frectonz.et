@@ -51,35 +51,33 @@ export default function Projects() {
           <Tag key={tag} tag={tag} onClick={() => addTag(tag)} />
         ))}
       </div>
-      <section className="flex gap-5 overflow-x-auto pb-2">
+      <section className="flex gap-3 overflow-x-auto pb-2">
         {filteredProjects.map((project, i) => (
           <article
             key={i}
-            className="min-w-[280px] w-[280px] sm:min-w-[400px] sm:w-[400px] min-h-[300px] border border-ink box-shadow flex flex-col"
+            className="min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px] border border-ink box-shadow p-3 flex flex-col gap-1.5"
           >
-            <header className="p-4 border-ink">
-              <h1 className="font-serif text-xl font-bold">{project.name}</h1>
-            </header>
-
-            <div className="p-4 border-y border-ink flex gap-2 overflow-x-scroll">
+            <div className="flex items-baseline justify-between gap-x-3">
+              <h1 className="font-serif font-bold">{project.name}</h1>
+              <div className="flex gap-3 text-sm shrink-0">
+                <a href={project.code} className="underline">
+                  Source
+                </a>
+                {project.url && (
+                  <a href={project.url} className="underline">
+                    Site
+                  </a>
+                )}
+              </div>
+            </div>
+            <p className="font-serif text-sm leading-snug grow">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1">
               {project.tags.map((tag) => (
                 <Tag key={tag} tag={tag} onClick={() => addTag(tag)} />
               ))}
             </div>
-
-            <div className="p-4 grow">
-              <p>{project.description}</p>
-            </div>
-            <footer className="px-4 pb-4 flex gap-4 justify-end">
-              <a href={project.code} className="underline">
-                Source
-              </a>
-              {project.url && (
-                <a href={project.url} className="underline">
-                  View Project
-                </a>
-              )}
-            </footer>
           </article>
         ))}
         {filteredProjects.length === 0 && <p>No matching projects</p>}

@@ -1,26 +1,12 @@
 @import "tailwindcss";
 
-@custom-variant dark {
-  &:where([data-theme="dark"], [data-theme="dark"] *) {
-    @slot;
-  }
-  @media (prefers-color-scheme: dark) {
-    &:where(
-      :root:not([data-theme="light"]),
-      :root:not([data-theme="light"]) *
-    ) {
-      @slot;
-    }
-  }
-}
-
 @theme inline {
   --color-ink: var(--ink);
   --color-paper: var(--paper);
 }
 
 :root {
-  color-scheme: light;
+  --gutter: 1.25rem;
   --ink: #000;
   --paper: #fff;
   --page: #efefef;
@@ -28,24 +14,14 @@
   --shadow: rgb(0 0 0 / 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --ink: #fff;
-    --paper: #000;
-    --page: #101010;
-    --dot: rgb(255 255 255 / 0.1);
-    --shadow: rgb(255 255 255 / 0.4);
+@media (min-width: 640px) {
+  :root {
+    --gutter: 2.5rem;
   }
 }
 
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --ink: #fff;
-  --paper: #000;
-  --page: #101010;
-  --dot: rgb(255 255 255 / 0.1);
-  --shadow: rgb(255 255 255 / 0.4);
+html {
+  font-size: 14px;
 }
 
 * {

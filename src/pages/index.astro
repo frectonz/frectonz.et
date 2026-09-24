@@ -117,7 +117,7 @@ import AdventCard from "@/components/AdventCard.astro";
     </Section>
 
     <Section title="Talks">
-      <CardRow gap={5}>
+      <CardRow>
         {
           talks.map((t) => (
             <TalkCard name={t.name} event={t.event} slides={t.slides} />

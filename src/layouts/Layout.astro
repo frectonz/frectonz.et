@@ -1,6 +1,5 @@
 ---
 import "@/style.css";
-import ThemeToggle from "@/components/ThemeToggle.astro";
 
 export interface OpenGraph {
   url: string;
@@ -22,15 +21,6 @@ const { title, description, og } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="color-scheme" content="light dark" />
-    <script is:inline>
-      try {
-        const theme = sessionStorage.getItem("theme");
-        if (theme === "light" || theme === "dark") {
-          document.documentElement.dataset.theme = theme;
-        }
-      } catch {}
-    </script>
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -57,8 +47,7 @@ const { title, description, og } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body class="mx-5 sm:mx-20">
-    <ThemeToggle />
+  <body class="mx-auto max-w-6xl px-(--gutter)">
     <slot />
   </body>
 </html>
