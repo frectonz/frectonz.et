@@ -2,7 +2,7 @@ export const civic = [
   {
     name: "rep.et",
     description:
-      "A civic web app for finding your elected representative in Ethiopia's House of Peoples' Representatives (HOPR)",
+      "A civic web app for finding your elected representative in Ethiopia's House of Peoples' Representatives.",
     code: "https://github.com/frectonz/rep.et",
     url: "https://rep.et",
   },
