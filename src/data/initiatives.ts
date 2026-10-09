@@ -4,7 +4,7 @@ export const initiatives = [
     code: "https://github.com/frectonz/overdueprogress.org",
     url: "https://overdueprogress.org",
     description:
-      "A publication dedicated to understanding how progress happens and how to make more of it, with a focus on Africa.",
+      "An African publication dedicated to understanding how progress happens and how to make more of it.",
   },
   {
     name: "The /dev/tty Prize",
