@@ -13,14 +13,16 @@ const { name, event, slides } = Astro.props;
 <Card
   class="min-w-[240px] w-[240px] sm:min-w-[300px] sm:w-[300px] p-3 flex flex-col gap-1.5"
 >
-  <div class="flex items-baseline justify-between gap-x-3">
-    <h1 class="font-serif font-bold">{name}</h1>
+  <h1 class="font-serif font-bold">{name}</h1>
+  <p class="font-serif text-sm leading-snug">{event}</p>
+  <div class="flex justify-end gap-3 text-sm mt-auto pt-1">
     <a
-      class="underline text-sm shrink-0"
+      class="underline"
       href={slides}
       target="_blank"
-      rel="noopener noreferrer">Slides</a
+      rel="noopener noreferrer"
     >
+      Slides
+    </a>
   </div>
-  <p class="font-serif text-sm leading-snug">{event}</p>
 </Card>
