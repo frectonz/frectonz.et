@@ -38,7 +38,7 @@ const { name, description, links, linksPosition = "top" } = Astro.props;
   <p class="font-serif text-sm leading-snug">{description}</p>
   {
     linksPosition === "bottom" && (
-      <div class="flex gap-3 text-sm mt-auto pt-1">
+      <div class="flex justify-end gap-3 text-sm mt-auto pt-1">
         {links.map((link) => (
           <a class="underline" href={link.href}>
             {link.label}
